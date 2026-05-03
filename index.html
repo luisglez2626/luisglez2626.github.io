@@ -88,7 +88,7 @@
                     <p class="text-gray-600">Double degree master and bachelor studies across Japan, France, and Mexico.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 cursor-pointer hover:shadow-lg transition" onclick="showSection('projects')">
-                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-microchip text-blue-500 mr-2"></i> Hardware Projects</h3>
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-microchip text-blue-500 mr-2"></i> Academic Projects</h3>
                     <p class="text-gray-600">Robotic manipulation, automation lines, and computer vision systems.</p>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500 cursor-pointer hover:shadow-lg transition" onclick="showSection('repositories')">
@@ -182,40 +182,36 @@
             </div>
         </section>
 
-        <!-- ================= SECTION: LIST OF PROJECTS ================= -->
+        <!-- ================= SECTION: LIST OF ACADEMIC PROJECTS ================= -->
         <section id="projects" class="section-view">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Academic and Hardware Projects</h2>
-            <p class="text-gray-600 mb-8">This section highlights the physical systems I built during my master and bachelor degrees. They involve mechanical design, electronics integration, and control software.</p>
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Academic Projects</h2>
+            <p class="text-gray-600 mb-8">This section highlights the physical systems I built during my master and bachelor degrees. They involve mechanical design, electronics integration, and control software. Click on any project to see the details and media.</p>
 
             <!-- Master Projects -->
             <h3 class="text-2xl font-bold text-slate-700 mb-4">Master Degree Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-200 w-full">
                         <img src="https://placehold.co/600x300/e2e8f0/475569?text=Micro-scale+Teleoperation" alt="Optical Tweezers" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-blue-600 font-semibold mb-1">Keio University (Japan)</div>
                         <h3 class="text-xl font-bold mb-2">Micro-scale Particle Teleoperation</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Designed a two-axis haptic teleoperation system to control optically trapped microparticles using bilateral admittance control.</p>
-                        <button onclick="showSection('project-detail-1')" class="mt-auto bg-slate-900 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
-                            Read More
-                        </button>
+                        <p class="text-gray-600 mb-4 flex-grow">I designed a two axis haptic teleoperation system. This system allows a user to physically feel and control microparticles trapped by a laser. I integrated trap stiffness calibration with admittance control and reaction force observers.</p>
+                        <span class="text-blue-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-2')">
                     <div class="h-48 bg-slate-200 w-full">
                         <img src="https://placehold.co/600x300/e2e8f0/475569?text=Cobotic+Assistant" alt="Cobotic Assistant" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-blue-600 font-semibold mb-1">Ecole Centrale de Nantes (France)</div>
                         <h3 class="text-xl font-bold mb-2">Medical Cobotic Assistant</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Developed a hand guidance method for a redundant macro-mini robot system to assist in percutaneous medical interventions.</p>
-                        <button class="mt-auto border-2 border-slate-900 text-slate-900 font-bold py-2 px-4 rounded cursor-not-allowed opacity-50 w-full text-center">
-                            Code Private
-                        </button>
+                        <p class="text-gray-600 mb-4 flex-grow">I developed a hand guidance method for a medical robot system. It uses a small surgical tool attached to a larger KUKA arm. The main arm automatically positions itself based on the movements of the smaller tool to assist in percutaneous medical interventions.</p>
+                        <span class="text-blue-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
             </div>
@@ -224,31 +220,65 @@
             <h3 class="text-2xl font-bold text-slate-700 mb-4">Bachelor Degree Projects</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-3')">
                     <div class="h-48 bg-slate-200 w-full">
                         <img src="https://placehold.co/600x300/e2e8f0/475569?text=Mobile+Manipulator" alt="Mobile Manipulator" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
                         <h3 class="text-xl font-bold mb-2">Automated Keychain Production Line</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Integrated a collaborative robot mounted on a mobile base. Combined navigation and task execution using ROS and industrial controllers.</p>
+                        <p class="text-gray-600 mb-4 flex-grow">I integrated a collaborative robot mounted on a mobile base to automate keychain production. This project combined autonomous navigation and task execution using ROS and industrial controllers. It also involved coordinating conveyors and an ABB dual arm YuMi robot.</p>
+                        <span class="text-green-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-4')">
                     <div class="h-48 bg-slate-200 w-full">
                         <img src="https://placehold.co/600x300/e2e8f0/475569?text=Manufacturing+Cell" alt="Manufacturing Cell" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
                         <h3 class="text-xl font-bold mb-2">RC Car Manufacturing Cell</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">Programmed an automated cell to assemble remote-controlled cars. Included PLC logic, conveyor coordination, and a digital twin using RobotStudio.</p>
+                        <p class="text-gray-600 mb-4 flex-grow">I programmed an automated cell to assemble remote controlled cars. I designed the PLC logic and coordinated the conveyor systems. I also created a digital twin using RobotStudio to simulate the process and detect collisions offline.</p>
+                        <span class="text-green-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= SECTION: PROJECT DETAIL 1 ================= -->
+        <!-- ================= SECTION: LIST OF REPOSITORIES ================= -->
+        <section id="repositories" class="section-view">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Personal Code Repositories</h2>
+            <p class="text-gray-600 mb-8">These are software projects I write to practice algorithms and learn new frameworks. Click on any repository to view the code structure, interface media, and technical details.</p>
+
+            <div class="space-y-6">
+
+                <!-- Repo 1: ROS2 Fruit Sorting (Clickable Card) -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 cursor-pointer hover:border-blue-400 hover:shadow-xl transition" onclick="showSection('repo-detail-1')">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Collaborative Arm: Fruit Sorting Simulation</h3>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        A complete ROS2 and Gazebo simulation of a robotic arm. It uses stereo vision to detect red and green apples, and an inverse kinematics solver to pick and sort them. Includes a custom Tkinter GUI for manual and automated control.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> Python</span>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-purple-500 text-xs mr-1"></i> C++</span>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-orange-500 text-xs mr-1"></i> ROS2</span>
+                        </div>
+                        <span class="text-blue-600 font-bold"><i class="fa-solid fa-folder-open mr-1"></i> Open Repository Details</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= DETAILED VIEWS (ACADEMIC PROJECTS) ================= -->
+
+        <!-- Detail: Master Thesis -->
         <section id="project-detail-1" class="section-view">
             <button onclick="showSection('projects')" class="mb-6 text-blue-600 hover:text-blue-800 font-medium">
                 <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
@@ -261,8 +291,8 @@
                 </div>
 
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <!-- Replace with a GIF or image of the optical tweezers setup -->
-                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=[Image+of+Optical+Tweezer+System]" alt="Optical Tweezers" class="w-full h-full object-cover">
+                    <!-- Replace with your actual image or video -->
+                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Optical+Tweezer+System" alt="Optical Tweezers" class="w-full h-full object-cover">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -270,12 +300,12 @@
                         <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technical Overview</h3>
                         
                         <div class="mb-4">
-                            <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
-                            <p class="text-gray-600 text-sm">Haptic Teleoperation, Admittance Control, Trap-stiffness Calibration</p>
+                            <h4 class="font-semibold text-gray-700 text-sm">Software</h4>
+                            <p class="text-gray-600 text-sm">MATLAB, C++, OpenCV</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
-                            <p class="text-gray-600 text-sm">Motorized stage, Laser controller, High-speed Camera, Linear Motor</p>
+                            <p class="text-gray-600 text-sm">Motorized stage, Laser controller, High speed Camera, Linear Motor</p>
                         </div>
                     </div>
 
@@ -283,7 +313,7 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
                             <p class="text-gray-700 leading-relaxed">
-                                Optical tweezers use a highly focused laser beam to hold and move microscopic objects. For my thesis, I wanted to allow a human operator to physically feel the microscopic forces while manipulating these particles. I designed a system that acts as a bridge between the macroscopic human world and the microscopic cellular world.
+                                Optical tweezers use a highly focused laser beam to hold and move microscopic objects. For my thesis, I wanted to allow a human operator to physically feel the microscopic forces while manipulating these particles. I built a system that acts as a bridge between the macroscopic human world and the microscopic cellular world.
                             </p>
                         </div>
 
@@ -293,10 +323,10 @@
                                 First, I set up the hardware to read image data from the microscope camera. I used this visual information to track the position of the microparticles in real time.
                             </p>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                Next, I calibrated the system using an experimental cross-validation technique to measure the trap-stiffness. This step was necessary to accurately calculate the invisible forces acting on the particle.
+                                Next, I calibrated the system using an experimental cross validation technique to measure the trap stiffness. This step was necessary to accurately calculate the invisible forces acting on the particle.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                Finally, I implemented an admittance-based bilateral control law. I used a reaction-force observer to send tactile feedback to a linear motor. This allowed the user to move the linear motor by hand and feel physical resistance whenever the microscopic particle encountered an obstacle in the fluid.
+                                Finally, I implemented an admittance based bilateral control law. I used a reaction force observer to send tactile feedback to a linear motor. This allowed the user to move the linear motor by hand and feel physical resistance whenever the microscopic particle encountered an obstacle in the fluid.
                             </p>
                         </div>
                     </div>
@@ -304,68 +334,141 @@
             </div>
         </section>
 
-        <!-- ================= SECTION: REPOSITORIES ================= -->
-        <section id="repositories" class="section-view">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Personal Code Repositories</h2>
-            <p class="text-gray-600 mb-8">These are software projects I write to practice algorithms and learn new frameworks. You will find clean code and clear documentation here.</p>
+        <!-- Detail: Cobotic Assistant -->
+        <section id="project-detail-2" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
+            </button>
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="mb-6">
+                    <h1 class="text-3xl font-bold text-slate-900 mb-4">Medical Cobotic Assistant</h1>
+                </div>
+                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
+                    <!-- Replace with your actual image or video -->
+                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Cobotic+Assistant" alt="Cobotic Assistant" class="w-full h-full object-cover">
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    This page is ready for you to add your specific project information. You can detail the KUKA arm integration, the torque control, and the hand guidance mechanisms you developed in France.
+                </p>
+            </div>
+        </section>
 
-            <div class="space-y-6">
+        <!-- Detail: Automated Keychain -->
+        <section id="project-detail-3" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-green-600 hover:text-green-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
+            </button>
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="mb-6">
+                    <h1 class="text-3xl font-bold text-slate-900 mb-4">Automated Keychain Production Line</h1>
+                </div>
+                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
+                    <!-- Replace with your actual image or video -->
+                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Keychain+Production" alt="Keychain Production" class="w-full h-full object-cover">
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    This page is ready for you to add your specific project information. You can detail the navigation setup, the ABB YuMi integration, and the overall system architecture you implemented in Mexico.
+                </p>
+            </div>
+        </section>
 
-                <!-- Repo 1: ROS2 Fruit Sorting -->
-                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-blue-400 transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Collaborative Arm: Fruit Sorting Simulation</h3>
-                    </div>
-                    
-                    <!-- Embedded YouTube Video -->
-                    <div class="w-full mb-6 rounded-lg overflow-hidden shadow-sm">
-                        <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/UTgQVBnhRxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+        <!-- Detail: RC Car Manufacturing -->
+        <section id="project-detail-4" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-green-600 hover:text-green-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
+            </button>
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="mb-6">
+                    <h1 class="text-3xl font-bold text-slate-900 mb-4">RC Car Manufacturing Cell</h1>
+                </div>
+                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
+                    <!-- Replace with your actual image or video -->
+                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Manufacturing+Cell" alt="Manufacturing Cell" class="w-full h-full object-cover">
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    This page is ready for you to add your specific project information. You can detail the PLC logic, conveyor control, and RobotStudio digital twin setup.
+                </p>
+            </div>
+        </section>
 
-                    <p class="text-gray-600 mb-4">
-                        A complete ROS2 and Gazebo simulation of a robotic arm. It uses stereo vision to detect red and green apples, and an inverse kinematics solver based on KDL to pick and sort them. Includes a custom Tkinter GUI for manual and automated control.
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex space-x-2">
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> Python</span>
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-purple-500 text-xs mr-1"></i> C++</span>
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-orange-500 text-xs mr-1"></i> ROS2</span>
-                        </div>
-                        <a href="https://github.com/luisglez2626/ros2-fruit-sorting" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">View Repository <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+        <!-- ================= DETAILED VIEWS (REPOSITORIES) ================= -->
+
+        <!-- Repo Detail: ROS2 Fruit Sorting -->
+        <section id="repo-detail-1" class="section-view">
+            <button onclick="showSection('repositories')" class="mb-6 text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Repositories
+            </button>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <span class="inline-block bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Simulation & Computer Vision</span>
+                        <h1 class="text-3xl font-bold text-slate-900 mb-2">Collaborative Arm: Fruit Sorting</h1>
                     </div>
+                    <a href="https://github.com/luisglez2626/ros2-fruit-sorting" target="_blank" class="bg-slate-900 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded transition hidden md:block">
+                        <i class="fa-brands fa-github mr-2"></i> View Code on GitHub
+                    </a>
                 </div>
 
-                <!-- Repo 2 -->
-                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-green-400 transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Extended Kalman Filter (EKF) in Python</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        A clean implementation of an EKF to estimate vehicle states from noisy sensor data. The repository includes test scripts and data visualization.
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex space-x-2">
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> Python</span>
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-yellow-500 text-xs mr-1"></i> Numpy</span>
-                        </div>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">View Repository <i class="fa-solid fa-arrow-right ml-1"></i></a>
-                    </div>
+                <!-- Embedded YouTube Video -->
+                <div class="w-full mb-8 rounded-lg overflow-hidden shadow-md">
+                    <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/UTgQVBnhRxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
-                <!-- Repo 3 -->
-                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-green-400 transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Object Tracking System</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Real-time object tracking system based on color and shape. It is optimized to run efficiently on embedded systems for mobile robotics.
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <div class="flex space-x-2">
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> C++</span>
-                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-purple-500 text-xs mr-1"></i> OpenCV</span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Technical Column -->
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technologies Used</h3>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Core Framework</h4>
+                            <p class="text-gray-600 text-sm">ROS2, ament_cmake</p>
                         </div>
-                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">View Repository <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Languages</h4>
+                            <p class="text-gray-600 text-sm">C++14, Python 3</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Simulation</h4>
+                            <p class="text-gray-600 text-sm">Gazebo 11, RobotStatePublisher</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Libraries</h4>
+                            <p class="text-gray-600 text-sm">OpenCV, Orocos KDL, Tkinter</p>
+                        </div>
+                    </div>
+
+                    <!-- Description Column -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Overview</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                I built a complete ROS2 and Gazebo simulation of a robotic arm to detect and sort red and green apples. I used custom stereo vision and inverse kinematics to accomplish this task.
+                            </p>
+                            
+                            <!-- Composite Image -->
+                            <img src="https://raw.githubusercontent.com/luisglez2626/ros2-fruit-sorting/main/SimulationPickPlace.jpg" alt="Simulation Interface and Gazebo View" class="w-full rounded-lg shadow-sm border border-gray-200 mb-4">
+                            <p class="text-sm text-gray-500 italic text-center mb-6">The custom control panel working together with the Gazebo environment and stereo vision cameras.</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Software Architecture</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                For the vision system, I wrote a Python node using OpenCV. It finds circular shapes and calculates the depth distance using the visual difference between the left and right camera lenses. It then shares these 3D coordinates over the network.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                For the arm movement, I created a C++ node. It receives the desired target coordinates and uses the Orocos Kinematics and Dynamics Library to calculate the exact joint angles needed to reach that position smoothly.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                I also designed a control panel interface using Tkinter. It lets the user move the arm manually, read the transformation matrices in real time, and trigger automatic hovering and picking sequences.
+                            </p>
+                        </div>
+                        
+                        <!-- Mobile GitHub button -->
+                        <a href="https://github.com/luisglez2626/ros2-fruit-sorting" target="_blank" class="bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 px-4 rounded transition block text-center md:hidden mt-8">
+                            <i class="fa-brands fa-github mr-2"></i> View Code on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
