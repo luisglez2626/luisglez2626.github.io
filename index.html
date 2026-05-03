@@ -3,76 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Luis González | Robotics Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .section-view {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .section-view.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <nav>
-        <div class="nav-content">
-            <a href="#" class="logo">My Name</a>
-            <div class="links">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold cursor-pointer hover:text-blue-400 transition" onclick="showSection('home')">
+                    <i class="fa-solid fa-robot mr-2"></i> Luis Glez
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="showSection('home')" class="hover:text-blue-400 transition font-medium">Home</button>
+                    <button onclick="showSection('education')" class="hover:text-blue-400 transition font-medium">Education & Awards</button>
+                    <button onclick="showSection('projects')" class="hover:text-blue-400 transition font-medium">Academic Projects</button>
+                    <button onclick="showSection('repositories')" class="hover:text-blue-400 transition font-medium">My Code</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 pb-4">
+            <button onclick="showSection('home')" class="block w-full text-left px-4 py-2 hover:bg-slate-700">Home</button>
+            <button onclick="showSection('education')" class="block w-full text-left px-4 py-2 hover:bg-slate-700">Education & Awards</button>
+            <button onclick="showSection('projects')" class="block w-full text-left px-4 py-2 hover:bg-slate-700">Academic Projects</button>
+            <button onclick="showSection('repositories')" class="block w-full text-left px-4 py-2 hover:bg-slate-700">My Code</button>
         </div>
     </nav>
 
-    <header id="about">
-        <div class="hero-text">
-            <h1>Hi, I'm [Your Name]</h1>
-            <h2>[Your Job Title]</h2>
-            <p>I am an engineer passionate about solving complex problems. I have experience in [Skill 1] and [Skill 2].</p>
-            <a href="resume.pdf" class="btn">View My CV</a>
-        </div>
-        <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic">
-    </header>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full">
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <h3>Master of Science in Engineering</h3>
-            <p><strong>University Name</strong> | 2023 - 2025</p>
-            <p>Specialized in Robotics and AI.</p>
-        </div>
-        <div class="card">
-            <h3>Bachelor of Science</h3>
-            <p><strong>University Name</strong> | 2019 - 2023</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
+        <!-- ================= SECTION: HOME ================= -->
+        <section id="home" class="section-view active">
+            <div class="bg-white rounded-xl shadow-md p-8 md:p-12 mb-8">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Profile Picture Placeholder -->
+                    <div class="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center border-4 border-slate-900 shrink-0 overflow-hidden">
+                        <img src="https://placehold.co/400x400/1e293b/ffffff?text=Your+Photo" alt="Luis Glez" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-bold text-slate-900 mb-2">Luis Arturo González Salas</h1>
+                        <h2 class="text-2xl text-blue-600 mb-4">M.Sc. in Robotics Engineering</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            I design, build, and program physical systems. I recently completed a double degree Master in Advanced Robotics in Japan and France. I have experience combining hardware, sensors, and control algorithms to solve real problems.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">ROS / ROS2</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">C/C++</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">Python</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">MATLAB</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">SolidWorks</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Project Screenshot">
-                <h3>Project Title</h3>
-                <p>A brief description of what you built and the problem it solves.</p>
-                <p class="tags"><strong>Tech:</strong> Python, C++, ROS</p>
-                <a href="#">View Details</a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-yellow-500 cursor-pointer hover:shadow-lg transition" onclick="showSection('education')">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-graduation-cap text-yellow-500 mr-2"></i> Education</h3>
+                    <p class="text-gray-600">Double degree master and bachelor studies across Japan, France, and Mexico.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 cursor-pointer hover:shadow-lg transition" onclick="showSection('projects')">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-microchip text-blue-500 mr-2"></i> Hardware Projects</h3>
+                    <p class="text-gray-600">Robotic manipulation, automation lines, and computer vision systems.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500 cursor-pointer hover:shadow-lg transition" onclick="showSection('repositories')">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-code text-green-500 mr-2"></i> Software Code</h3>
+                    <p class="text-gray-600">Personal repositories with clean and structured algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION: EDUCATION & ACHIEVEMENTS ================= -->
+        <section id="education" class="section-view">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Education and Main Achievements</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Education Column -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fa-solid fa-book-open text-blue-500 mr-3"></i> Academic Background
+                    </h3>
+                    
+                    <div class="mb-6 relative pl-6 border-l-2 border-blue-200">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
+                        <h4 class="font-bold text-lg text-slate-800">M.Sc. in Science & Engineering</h4>
+                        <p class="text-blue-600 font-semibold mb-1">Keio University (Tokyo, Japan) | 2024 - 2025</p>
+                        <p class="text-gray-600 text-sm">Part of the JEMARO Double Degree program. Focused on micro-robotics and control systems.</p>
+                    </div>
+
+                    <div class="mb-6 relative pl-6 border-l-2 border-blue-200">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
+                        <h4 class="font-bold text-lg text-slate-800">M.Sc. in Advanced Robotics</h4>
+                        <p class="text-blue-600 font-semibold mb-1">Ecole Centrale de Nantes (France) | 2023 - 2024</p>
+                        <p class="text-gray-600 text-sm">First year of the JEMARO Double Degree. Focused on kinematics, dynamics, and medical robotics.</p>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-blue-200">
+                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
+                        <h4 class="font-bold text-lg text-slate-800">B.Sc. in Mechatronics Engineering</h4>
+                        <p class="text-blue-600 font-semibold mb-1">Tecnológico de Monterrey (Mexico) | 2019 - 2023</p>
+                        <p class="text-gray-600 text-sm mb-1">Minor in Cyber-physical Systems.</p>
+                        <p class="text-gray-500 text-sm font-semibold">GPA: 92.7 / 100</p>
+                    </div>
+                </div>
+
+                <!-- Achievements Column -->
+                <div class="bg-white rounded-xl shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+                        <i class="fa-solid fa-trophy text-yellow-500 mr-3"></i> Honors and Awards
+                    </h3>
+
+                    <div class="flex items-start mb-4">
+                        <i class="fa-solid fa-medal text-yellow-500 mt-1 mr-3 text-lg"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Erasmus Mundus Scholarship</p>
+                            <p class="text-gray-600 text-sm">Awarded for master studies in the JEMARO program (2023).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-4">
+                        <i class="fa-solid fa-award text-yellow-500 mt-1 mr-3 text-lg"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Full Coverage Scholarship</p>
+                            <p class="text-gray-600 text-sm">Awarded full tuition for bachelor studies (2019).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-4">
+                        <i class="fa-solid fa-code text-blue-500 mt-1 mr-3 text-lg"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">Olympiad of Informatics Medals</p>
+                            <p class="text-gray-600 text-sm">Silver medal at the National Mexican Olympiad (2018) and Gold medal at the State level (2016 to 2018).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start mb-4">
+                        <i class="fa-solid fa-certificate text-green-500 mt-1 mr-3 text-lg"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">CSWA SolidWorks Certification</p>
+                            <p class="text-gray-600 text-sm">Certified associate in mechanical design (2021).</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <i class="fa-solid fa-hands-holding-circle text-red-400 mt-1 mr-3 text-lg"></i>
+                        <div>
+                            <p class="font-bold text-slate-800">COVID-19 Public Hospital Donation</p>
+                            <p class="text-gray-600 text-sm">Designed and produced 1800 mask protectors for medical staff (2020).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION: LIST OF PROJECTS ================= -->
+        <section id="projects" class="section-view">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Academic and Hardware Projects</h2>
+            <p class="text-gray-600 mb-8">This section highlights the physical systems I built during my master and bachelor degrees. They involve mechanical design, electronics integration, and control software.</p>
+
+            <!-- Master Projects -->
+            <h3 class="text-2xl font-bold text-slate-700 mb-4">Master Degree Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                    <div class="h-48 bg-slate-200 w-full">
+                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Micro-scale+Teleoperation" alt="Optical Tweezers" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-sm text-blue-600 font-semibold mb-1">Keio University (Japan)</div>
+                        <h3 class="text-xl font-bold mb-2">Micro-scale Particle Teleoperation</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Designed a two-axis haptic teleoperation system to control optically trapped microparticles using bilateral admittance control.</p>
+                        <button onclick="showSection('project-detail-1')" class="mt-auto bg-slate-900 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition w-full text-center">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                    <div class="h-48 bg-slate-200 w-full">
+                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Cobotic+Assistant" alt="Cobotic Assistant" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-sm text-blue-600 font-semibold mb-1">Ecole Centrale de Nantes (France)</div>
+                        <h3 class="text-xl font-bold mb-2">Medical Cobotic Assistant</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Developed a hand guidance method for a redundant macro-mini robot system to assist in percutaneous medical interventions.</p>
+                        <button class="mt-auto border-2 border-slate-900 text-slate-900 font-bold py-2 px-4 rounded cursor-not-allowed opacity-50 w-full text-center">
+                            Code Private
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Project Screenshot">
-                <h3>Another Project</h3>
-                <p>Description of the project results.</p>
-                <p class="tags"><strong>Tech:</strong> MATLAB, AI</p>
-                <a href="#">View Details</a>
-            </div>
+            <!-- Bachelor Projects -->
+            <h3 class="text-2xl font-bold text-slate-700 mb-4">Bachelor Degree Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                    <div class="h-48 bg-slate-200 w-full">
+                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Mobile+Manipulator" alt="Mobile Manipulator" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
+                        <h3 class="text-xl font-bold mb-2">Automated Keychain Production Line</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Integrated a collaborative robot mounted on a mobile base. Combined navigation and task execution using ROS and industrial controllers.</p>
+                    </div>
+                </div>
 
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100">
+                    <div class="h-48 bg-slate-200 w-full">
+                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Manufacturing+Cell" alt="Manufacturing Cell" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
+                        <h3 class="text-xl font-bold mb-2">RC Car Manufacturing Cell</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Programmed an automated cell to assemble remote-controlled cars. Included PLC logic, conveyor coordination, and a digital twin using RobotStudio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION: PROJECT DETAIL 1 ================= -->
+        <section id="project-detail-1" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
+            </button>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="mb-6">
+                    <span class="inline-block bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Master Thesis Project</span>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-4">Micro-scale Particle Manipulation Using Bilateral Control</h1>
+                </div>
+
+                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
+                    <!-- Replace with a GIF or image of the optical tweezers setup -->
+                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=[Image+of+Optical+Tweezer+System]" alt="Optical Tweezers" class="w-full h-full object-cover">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technical Overview</h3>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
+                            <p class="text-gray-600 text-sm">Haptic Teleoperation, Admittance Control, Trap-stiffness Calibration</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
+                            <p class="text-gray-600 text-sm">Motorized stage, Laser controller, High-speed Camera, Linear Motor</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Optical tweezers use a highly focused laser beam to hold and move microscopic objects. For my thesis, I wanted to allow a human operator to physically feel the microscopic forces while manipulating these particles. I designed a system that acts as a bridge between the macroscopic human world and the microscopic cellular world.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Development Process</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                First, I set up the hardware to read image data from the microscope camera. I used this visual information to track the position of the microparticles in real time.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Next, I calibrated the system using an experimental cross-validation technique to measure the trap-stiffness. This step was necessary to accurately calculate the invisible forces acting on the particle.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Finally, I implemented an admittance-based bilateral control law. I used a reaction-force observer to send tactile feedback to a linear motor. This allowed the user to move the linear motor by hand and feel physical resistance whenever the microscopic particle encountered an obstacle in the fluid.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION: REPOSITORIES ================= -->
+        <section id="repositories" class="section-view">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-2 border-gray-200 pb-2">Personal Code Repositories</h2>
+            <p class="text-gray-600 mb-8">These are software projects I write to practice algorithms and learn new frameworks. You will find clean code and clear documentation here.</p>
+
+            <div class="space-y-6">
+                <!-- Repo 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-green-400 transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Extended Kalman Filter (EKF) in Python</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        A clean implementation of an EKF to estimate vehicle states from noisy sensor data. The repository includes test scripts and data visualization.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> Python</span>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-yellow-500 text-xs mr-1"></i> Numpy</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">View Repository <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Repo 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:border-green-400 transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Object Tracking System</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Real-time object tracking system based on color and shape. It is optimized to run efficiently on embedded systems for mobile robotics.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-blue-500 text-xs mr-1"></i> C++</span>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-circle text-purple-500 text-xs mr-1"></i> OpenCV</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">View Repository <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer class="bg-slate-900 text-white mt-auto py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:Luis_glez26@outlook.com" class="text-gray-300 hover:text-white transition flex items-center">
+                    <i class="fa-solid fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/luis-arturo-gonzalez-salas/" target="_blank" class="text-gray-300 hover:text-white transition flex items-center">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/luisglez2626" target="_blank" class="text-gray-300 hover:text-white transition flex items-center">
+                    <i class="fa-brands fa-github text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm">© 2026 Luis Arturo González Salas.</p>
         </div>
-    </section>
-
-    <footer id="contact">
-        <h2>Get In Touch</h2>
-        <p>I am looking for new opportunities.</p>
-        <a href="mailto:email@example.com">Email Me</a>
-        <a href="https://linkedin.com">LinkedIn</a>
-        <a href="https://github.com">GitHub</a>
     </footer>
 
+    <!-- Navigation Script -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section-view');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            document.getElementById(sectionId).classList.add('active');
+            window.scrollTo(0, 0);
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
