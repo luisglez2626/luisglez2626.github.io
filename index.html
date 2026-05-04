@@ -193,7 +193,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
-                    <!-- Changed object-cover to object-contain -->
+                    <!-- Kept object-contain for the thumbnails so they stay perfectly inside the card -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -206,7 +206,7 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-2')">
-                    <!-- Changed object-cover to object-contain -->
+                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Cobotic Assistant" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -224,7 +224,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-3')">
-                    <!-- Changed object-cover to object-contain -->
+                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Manipulator" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -237,7 +237,7 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-4')">
-                    <!-- Changed object-cover to object-contain -->
+                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -293,9 +293,10 @@
                     <span class="inline-block bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Master Thesis Project</span>
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Micro-scale Particle Manipulation Using Bilateral Control</h1>
                 </div>
-                <!-- Changed hero images to object-contain as well to prevent clipping inside the detail view -->
-                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden mb-8">
-                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                
+                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
+                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
+                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -348,7 +349,7 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Medical Cobotic Assistant</h1>
                 </div>
 
-                <!-- YouTube Video -->
+                <!-- YouTube Video (Kept fixed height for video player) -->
                 <div class="w-full mb-8 rounded-lg overflow-hidden shadow-md">
                     <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/05S68OqM6BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -467,9 +468,9 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Automated Keychain Production Line</h1>
                 </div>
 
-                <!-- Hero Image with object-contain -->
-                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden mb-8">
-                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
+                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
+                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -632,11 +633,6 @@
                             <p class="text-sm text-gray-500 italic mt-2">Screenshot of the Digital Twin simulation used to test the plant layout.</p>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Tecnomatix Storage Simulation</h4>
-                            <img src="assets/images/TEC_cyber_tecnomatix_storage.png" alt="Tecnomatix Storage Simulation" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
-                            <p class="text-sm text-gray-500 italic mt-2">Additional views of the Digital Twin optimizing storage layouts.</p>
-                        </div>
-                        <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">UR5 at Conveyor</h4>
                             <img src="assets/images/TEC_cyber_UR5_conveyor.png" alt="UR5 Conveyor" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
                             <p class="text-sm text-gray-500 italic mt-2">The UR robot interacting with materials at the conveyor station.</p>
@@ -660,9 +656,9 @@
                 <div class="mb-6">
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">RC Car Manufacturing Cell</h1>
                 </div>
-                <!-- Changed hero image to object-contain -->
-                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden mb-8">
-                    <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
+                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
+                    <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 <p class="text-gray-700 leading-relaxed">
                     This page is ready for you to add your specific project information. You can detail the PLC logic, conveyor control, and RobotStudio digital twin setup.
