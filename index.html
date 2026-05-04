@@ -27,7 +27,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="text-xl font-bold cursor-pointer hover:text-blue-400 transition" onclick="showSection('home')">
-                    <i class="fa-solid fa-robot mr-2"></i> Luis Glez
+                    <i class="fa-solid fa-robot mr-2"></i> Luis González
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6">
@@ -193,6 +193,7 @@
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-200 w-full">
+                        <!-- Asegúrate de subir optical_tweezers.jpg a tu carpeta -->
                         <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
@@ -260,7 +261,7 @@
                     </div>
                     
                     <p class="text-gray-600 mb-4">
-                        A complete ROS2 and Gazebo simulation of a robotic arm. It uses stereo vision to detect red and green apples, and an inverse kinematics solver to pick and sort them. Includes a custom Tkinter GUI for manual and automated control.
+                        A complete ROS 2 and Gazebo simulation of a robotic arm. It uses stereo vision to detect red and green apples, and an inverse kinematics solver to pick and sort them. Includes a custom Tkinter GUI for manual and automated control.
                     </p>
                     <div class="flex justify-between items-center">
                         <div class="flex space-x-2">
@@ -356,7 +357,7 @@
                         
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
-                            <p class="text-gray-600 text-sm">Impedance Control, Kinematics, Task Distribution, Manipulability Index</p>
+                            <p class="text-gray-600 text-sm">Impedance Control, Kinematics, Jacobian, Task Distribution, Manipulability Index</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
@@ -373,7 +374,7 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                I developed a simulation for the hand guidance of a macro micro redundant robot. The goal of this project was to assist in percutaneous medical interventions. Improving medical gestures leads to better patient care, reduces intervention costs, and improves the overall working conditions for practitioners. 
+                                I developed a simulation for the hand guidance of a macro micro redundant robot. The goal of this project was to assist in percutaneous medical interventions. Improving medical gestures leads to better patient care, reduces intervention costs, and improves the overall working conditions for surgeons. 
                             </p>
                             <p class="text-gray-700 leading-relaxed">
                                 The entire system was built as a simulation using MATLAB and Simulink. The setup consisted of a large 7 DoF KUKA robot acting as the macro system and a small 3 DoF robot acting as the micro system.
@@ -381,15 +382,15 @@
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Development Process</h3>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Robotics Fundamentals and Control</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                First, I defined the configuration of the robot using Denavit Hartenberg parameters. A core requirement of the project was that the main KUKA arm had to be controlled by position while keeping a static orientation, whereas the smaller micro robot had to be controlled by torque.
+                                First, I defined the configuration of both robots using Denavit Hartenberg parameters to calculate their forward kinematics and Jacobian matrices. The Jacobian is essentially the mathematical bridge between the joint velocities and the tool's velocity. From this Jacobian, I calculated the manipulability index. This index is a critical safety and performance metric because it tells the system how close the robot is to a singularity, a dangerous position where the arm gets mathematically stuck.
                             </p>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                I used a computed torque controller and implemented an impedance control law. This allowed the system to accurately simulate a physical force applied by the user when pushing the medical tool. 
+                                A core requirement was that the main KUKA arm had to be controlled by position while maintaining a fixed orientation, whereas the smaller micro robot was controlled purely by torque. I designed a computed torque controller with an impedance control law. This is extremely important for medical applications. Instead of forcing the robot to move rigidly to a point, the impedance control makes the tool act like a virtual spring and damper. This allows the system to yield softly when the surgeon applies physical force, making the heavy robot feel weightless and safe to guide by hand.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                To make both robots move smoothly together, I implemented a task distribution algorithm. This logic calculates the manipulability index and the vector norm to dynamically adapt the gain between the macro and micro systems.
+                                To make both robots work as a single unified system, I developed a task distribution algorithm. This logic continuously monitors the distance between the micro robot's base and its tip, known as length AB, along with the manipulability index. Based on these values, the algorithm dynamically adjusts the adaptive gain, deciding in real time whether the large KUKA arm needs to move to assist the small tool or if the small tool has enough workspace to move alone.
                             </p>
                         </div>
                     </div>
@@ -402,47 +403,47 @@
                     <div class="space-y-12">
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Macro Micro Robot Configuration</h4>
-                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full max-w-sm mx-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing'">
                         </div>
 
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">General Control Diagram</h4>
-                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Diagram" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Diagram" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
                         </div>
 
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Torque Control Diagram</h4>
-                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control Diagram" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control Diagram" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
                         </div>
 
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Micro Robot Kinematic Points (Length AB)</h4>
-                            <img src="assets/images/ECN_research_lengthAB.png" alt="Micro Robot Points A and B" class="w-full md:w-1/2 mx-auto rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/600x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_lengthAB.png" alt="Micro Robot Points A and B" class="w-full max-w-sm mx-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/600x600/e2e8f0/475569?text=Image+Missing'">
                             <p class="text-sm text-gray-500 italic text-center mt-2">The distance between point A and point B dictates the task distribution gain.</p>
                         </div>
 
                         <!-- 3 Graphs -->
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Adaptive Gain and Manipulability Index</h4>
-                            <img src="assets/images/ECN_research_graph_gain.png" alt="Adaptive Gain Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_graph_gain.png" alt="Adaptive Gain Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Desired Cartesian Displacement</h4>
-                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Displacement Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Displacement Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Measured vs Desired Global Trajectory</h4>
-                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Global Trajectory Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Global Trajectory Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
                         </div>
 
                         <!-- Simulink Annexes -->
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">Simulink Models (Annexes)</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <img src="assets/images/ECN_research_annex_17.png" alt="Simulink Model 17" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
-                                <img src="assets/images/ECN_research_annex_19.png" alt="Simulink Model 19" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
-                                <img src="assets/images/ECN_research_annex_20.png" alt="Simulink Model 20" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
-                                <img src="assets/images/ECN_research_annex_21.png" alt="Simulink Model 21" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <img src="assets/images/ECN_research_annex_17.png" alt="Simulink Model 17" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_19.png" alt="Simulink Model 19" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_20.png" alt="Simulink Model 20" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_21.png" alt="Simulink Model 21" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 object-contain" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
                             </div>
                         </div>
 
@@ -520,11 +521,11 @@
                         
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Core Framework</h4>
-                            <p class="text-gray-600 text-sm">ROS2, ament_cmake</p>
+                            <p class="text-gray-600 text-sm">ROS 2, ament_cmake</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Languages</h4>
-                            <p class="text-gray-600 text-sm">C++14, Python 3</p>
+                            <p class="text-gray-600 text-sm">C++, Python 3</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Simulation</h4>
@@ -541,25 +542,55 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Project Overview</h3>
                             <p class="text-gray-700 leading-relaxed mb-4">
-                                I built a complete ROS2 and Gazebo simulation of a robotic arm to detect and sort red and green apples. I used custom stereo vision and inverse kinematics to accomplish this task.
+                                I built a complete ROS 2 and Gazebo simulation of a robotic arm to detect and sort red and green apples. The system is built on a modern robotics stack combining C++ for math and Python for high level logic. I used ROS 2 as the middleware to allow different nodes to communicate, and Gazebo for the physics simulation where the robot interacts with objects.
                             </p>
                             
                             <!-- Composite Image directly from your repo -->
-                            <img src="https://raw.githubusercontent.com/luisglez2626/ros2-fruit-sorting/main/SimulationPickPlace.jpg" alt="Simulation Interface and Gazebo View" class="w-full rounded-lg shadow-sm border border-gray-200 mb-4">
+                            <img src="https://raw.githubusercontent.com/luisglez2626/ros2-fruit-sorting/main/SimulationPickPlace.jpg" alt="Simulation Interface and Gazebo View" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 mb-4 h-auto">
                             <p class="text-sm text-gray-500 italic text-center mb-6">The custom control panel working together with the Gazebo environment and stereo vision cameras.</p>
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Software Architecture</h3>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Robotics Fundamentals and Architecture</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                For the vision system, I wrote a Python node using OpenCV. It finds circular shapes and calculates the depth distance using the visual difference between the left and right camera lenses. It then shares these 3D coordinates over the network.
+                                The vision detector script uses OpenCV to process the stereo camera feed. By comparing the pixel shift between the left and right lenses, the system calculates the depth distance to the apples. It uses a specific formula multiplying the focal length by the baseline and dividing by the pixel shift. Then, it uses the TF2 library to translate these camera coordinates into world coordinates so the robot base knows exactly where to reach.
                             </p>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                For the arm movement, I created a C++ node. It receives the desired target coordinates and uses the Orocos Kinematics and Dynamics Library to calculate the exact joint angles needed to reach that position smoothly.
+                                For the arm movement, I wrote a C++ node that handles the kinematics. It uses the Orocos Kinematics and Dynamics Library to solve the inverse kinematics problem. If I want the robotic hand at a specific coordinate, the Levenberg Marquardt Algorithm calculates the exact angles for all six motors.
                             </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                I also designed a control panel interface using Tkinter. It lets the user move the arm manually, read the transformation matrices in real time, and trigger automatic hovering and picking sequences.
+                            <p class="text-gray-700 leading-relaxed mb-8">
+                                The entire process starts with a launch file that loads the robot into the Gazebo world. The vision node finds the apples and publishes their location. A custom Tkinter interface allows the user to select an apple. The target coordinates are sent to the inverse kinematics solver, which converts the 3D point into joint angles and sends them to the controller manager to execute the movement.
                             </p>
+                        </div>
+
+                        <div class="mb-6 border-t border-gray-200 pt-8">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">File Architecture</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">my_arm.urdf.xacro</p>
+                                    <p class="text-gray-600 text-sm">Defines the physical structure, joints, and sensors of the robot. It acts as the skeleton.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">fruit_sorting.world</p>
+                                    <p class="text-gray-600 text-sm">Defines the environment, including the table and the apples. It acts as the simulation stage.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">ik_solver_node.cpp</p>
+                                    <p class="text-gray-600 text-sm">Solves the math for moving the arm to 3D points. It acts as the brain calculating the movements.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">vision_detector.py</p>
+                                    <p class="text-gray-600 text-sm">Detects red and green apples using color masks and calculates stereo depth. It acts as the eyes.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">cartesian_jogger.py</p>
+                                    <p class="text-gray-600 text-sm">Provides a graphical interface to manually move the robot and capture positions. It acts as the remote control.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded border border-gray-200">
+                                    <p class="font-bold text-slate-800 text-sm mb-1">spawn_arm.launch.py</p>
+                                    <p class="text-gray-600 text-sm">The master script that starts the simulation and coordinates all the nodes.</p>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- Mobile GitHub button -->
