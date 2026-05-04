@@ -27,7 +27,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="text-xl font-bold cursor-pointer hover:text-blue-400 transition" onclick="showSection('home')">
-                    <i class="fa-solid fa-robot mr-2"></i> Luis González
+                    <i class="fa-solid fa-robot mr-2"></i> Luis Glez
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6">
@@ -460,14 +460,75 @@
             </button>
             <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
                 <div class="mb-6">
+                    <span class="inline-block bg-green-100 text-green-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Bachelor Degree Project - Cyberphysical Systems Minor</span>
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Automated Keychain Production Line</h1>
                 </div>
+
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
                     <img src="assets/images/keychain_production.jpg" alt="Keychain Production" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
-                <p class="text-gray-700 leading-relaxed">
-                    This page is ready for you to add your specific project information. You can detail the navigation setup, the ABB YuMi integration, and the overall system architecture you implemented in Mexico.
-                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Technical Column -->
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technical Overview</h3>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
+                            <p class="text-gray-600 text-sm">System Integration, Autonomous Navigation, PLC Communication, Robot Safety</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
+                            <p class="text-gray-600 text-sm">ROS, Python, Modbus, Custom GUI</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
+                            <p class="text-gray-600 text-sm">Mobile Manipulator (xArm on mobile base), ABB YuMi, Modula vertical storage, PLCs</p>
+                        </div>
+                    </div>
+
+                    <!-- Description Column -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                I developed this project during the Cyberphysical Systems class of my Mechatronics Engineering bachelor degree. Successfully designing and integrating this complete production cell awarded me my minor specialty in Cyberphysical Systems. The main goal was to build a fully automated production line for keychains in collaboration with industry partners like Omron and Siemens.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">System Integration and Architecture</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The physical setup integrated multiple industrial components working together. The core of the operation was a mobile manipulator, which consisted of a collaborative robotic arm mounted on an autonomous mobile base. I also connected conveyor belts, a vertical automated storage unit, and an ABB dual arm YuMi robot to handle the assembly tasks.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                To make all these separate machines talk to each other, I wrote Python scripts and implemented Modbus communication protocols with the industrial PLCs. I used ROS to handle the autonomous navigation of the mobile base so it could move freely around the factory floor.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                I designed a central user interface to monitor and control the entire operation. This interface allowed operators to launch specific pick and place routines, check the mobile base battery, and manage the communication between the robotic arms and the storage unit. Throughout the process, I applied safety standards for collaborative robots to ensure the physical cell was safe for human operators.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Gallery Section -->
+                <div class="border-t border-gray-200 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">System Components and Interface</h3>
+                    
+                    <div class="space-y-12">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Mobile Manipulator (MOMA)</h4>
+                            <img src="assets/images/keychain_moma.jpg" alt="Mobile Manipulator Robot" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic text-center mt-2">The collaborative robotic arm mounted on the autonomous mobile base.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Central Control Interface</h4>
+                            <img src="assets/images/keychain_interface.png" alt="Control Interface" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic text-center mt-2">The custom graphical user interface I built to manage routines, monitor battery, and control the robotic stations.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
