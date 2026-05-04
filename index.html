@@ -27,7 +27,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="text-xl font-bold cursor-pointer hover:text-blue-400 transition" onclick="showSection('home')">
-                    <i class="fa-solid fa-robot mr-2"></i> Luis González
+                    <i class="fa-solid fa-robot mr-2"></i> Luis Glez
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6">
@@ -60,9 +60,9 @@
         <section id="home" class="section-view active">
             <div class="bg-white rounded-xl shadow-md p-8 md:p-12 mb-8">
                 <div class="flex flex-col md:flex-row items-center gap-8">
-                    <!-- Profile Picture Placeholder -->
+                    <!-- Profile Picture -->
                     <div class="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center border-4 border-slate-900 shrink-0 overflow-hidden">
-                        <img src="https://placehold.co/400x400/1e293b/ffffff?text=Your+Photo" alt="Luis Glez" class="w-full h-full object-cover">
+                        <img src="assets/images/profile.jpg" alt="Luis Glez" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/1e293b/ffffff?text=Your+Photo'">
                     </div>
                     <div>
                         <h1 class="text-4xl font-bold text-slate-900 mb-2">Luis Arturo González Salas</h1>
@@ -193,7 +193,7 @@
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Micro-scale+Teleoperation" alt="Optical Tweezers" class="w-full h-full object-cover">
+                        <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-blue-600 font-semibold mb-1">Keio University (Japan)</div>
@@ -205,12 +205,12 @@
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-2')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Cobotic+Assistant" alt="Cobotic Assistant" class="w-full h-full object-cover">
+                        <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Cobotic Assistant" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-blue-600 font-semibold mb-1">Ecole Centrale de Nantes (France)</div>
                         <h3 class="text-xl font-bold mb-2">Medical Cobotic Assistant</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">I developed a hand guidance method for a medical robot system. It uses a small surgical tool attached to a larger KUKA arm. The main arm automatically positions itself based on the movements of the smaller tool to assist in percutaneous medical interventions.</p>
+                        <p class="text-gray-600 mb-4 flex-grow">I developed a simulation for the hand guidance of a macro micro redundant robot. The system was designed for medical applications to assist in percutaneous interventions using advanced torque and impedance control laws.</p>
                         <span class="text-blue-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
@@ -222,7 +222,7 @@
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-3')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Mobile+Manipulator" alt="Mobile Manipulator" class="w-full h-full object-cover">
+                        <img src="assets/images/keychain_production.jpg" alt="Mobile Manipulator" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
@@ -234,7 +234,7 @@
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-4')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <img src="https://placehold.co/600x300/e2e8f0/475569?text=Manufacturing+Cell" alt="Manufacturing Cell" class="w-full h-full object-cover">
+                        <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
@@ -291,8 +291,7 @@
                 </div>
 
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <!-- Replace with your actual image or video -->
-                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Optical+Tweezer+System" alt="Optical Tweezers" class="w-full h-full object-cover">
+                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -341,15 +340,115 @@
             </button>
             <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
                 <div class="mb-6">
+                    <span class="inline-block bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Ecole Centrale de Nantes Research</span>
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Medical Cobotic Assistant</h1>
                 </div>
-                <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <!-- Replace with your actual image or video -->
-                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Cobotic+Assistant" alt="Cobotic Assistant" class="w-full h-full object-cover">
+
+                <!-- YouTube Video -->
+                <div class="w-full mb-8 rounded-lg overflow-hidden shadow-md">
+                    <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/05S68OqM6BU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
-                    This page is ready for you to add your specific project information. You can detail the KUKA arm integration, the torque control, and the hand guidance mechanisms you developed in France.
-                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Technical Column -->
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technical Overview</h3>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
+                            <p class="text-gray-600 text-sm">Impedance Control, Kinematics, Task Distribution, Manipulability Index</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
+                            <p class="text-gray-600 text-sm">MATLAB, Simulink</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Simulated Hardware</h4>
+                            <p class="text-gray-600 text-sm">KUKA iiwa 7 R800 (7 DoF), RRR Serial Robot (3 DoF)</p>
+                        </div>
+                    </div>
+
+                    <!-- Description Column -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                I developed a simulation for the hand guidance of a macro micro redundant robot. The goal of this project was to assist in percutaneous medical interventions. Improving medical gestures leads to better patient care, reduces intervention costs, and improves the overall working conditions for practitioners. 
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                The entire system was built as a simulation using MATLAB and Simulink. The setup consisted of a large 7 DoF KUKA robot acting as the macro system and a small 3 DoF robot acting as the micro system.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Development Process</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                First, I defined the configuration of the robot using Denavit Hartenberg parameters. A core requirement of the project was that the main KUKA arm had to be controlled by position while keeping a static orientation, whereas the smaller micro robot had to be controlled by torque.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                I used a computed torque controller and implemented an impedance control law. This allowed the system to accurately simulate a physical force applied by the user when pushing the medical tool. 
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                To make both robots move smoothly together, I implemented a task distribution algorithm. This logic calculates the manipulability index and the vector norm to dynamically adapt the gain between the macro and micro systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Gallery Section -->
+                <div class="border-t border-gray-200 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Simulation Architecture and Results</h3>
+                    
+                    <div class="space-y-12">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Macro Micro Robot Configuration</h4>
+                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">General Control Diagram</h4>
+                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Diagram" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Torque Control Diagram</h4>
+                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control Diagram" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Micro Robot Kinematic Points (Length AB)</h4>
+                            <img src="assets/images/ECN_research_lengthAB.png" alt="Micro Robot Points A and B" class="w-full md:w-1/2 mx-auto rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/600x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic text-center mt-2">The distance between point A and point B dictates the task distribution gain.</p>
+                        </div>
+
+                        <!-- 3 Graphs -->
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Adaptive Gain and Manipulability Index</h4>
+                            <img src="assets/images/ECN_research_graph_gain.png" alt="Adaptive Gain Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Desired Cartesian Displacement</h4>
+                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Displacement Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Measured vs Desired Global Trajectory</h4>
+                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Global Trajectory Graph" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
+                        </div>
+
+                        <!-- Simulink Annexes -->
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Simulink Models (Annexes)</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <img src="assets/images/ECN_research_annex_17.png" alt="Simulink Model 17" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_19.png" alt="Simulink Model 19" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_20.png" alt="Simulink Model 20" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                                <img src="assets/images/ECN_research_annex_21.png" alt="Simulink Model 21" class="w-full rounded-lg shadow-sm border border-gray-200" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Image+Missing'">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -363,8 +462,7 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Automated Keychain Production Line</h1>
                 </div>
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <!-- Replace with your actual image or video -->
-                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Keychain+Production" alt="Keychain Production" class="w-full h-full object-cover">
+                    <img src="assets/images/keychain_production.jpg" alt="Keychain Production" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 <p class="text-gray-700 leading-relaxed">
                     This page is ready for you to add your specific project information. You can detail the navigation setup, the ABB YuMi integration, and the overall system architecture you implemented in Mexico.
@@ -382,8 +480,7 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">RC Car Manufacturing Cell</h1>
                 </div>
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <!-- Replace with your actual image or video -->
-                    <img src="https://placehold.co/1200x600/1e293b/ffffff?text=Image+of+Manufacturing+Cell" alt="Manufacturing Cell" class="w-full h-full object-cover">
+                    <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 <p class="text-gray-700 leading-relaxed">
                     This page is ready for you to add your specific project information. You can detail the PLC logic, conveyor control, and RobotStudio digital twin setup.
@@ -447,7 +544,7 @@
                                 I built a complete ROS2 and Gazebo simulation of a robotic arm to detect and sort red and green apples. I used custom stereo vision and inverse kinematics to accomplish this task.
                             </p>
                             
-                            <!-- Composite Image -->
+                            <!-- Composite Image directly from your repo -->
                             <img src="https://raw.githubusercontent.com/luisglez2626/ros2-fruit-sorting/main/SimulationPickPlace.jpg" alt="Simulation Interface and Gazebo View" class="w-full rounded-lg shadow-sm border border-gray-200 mb-4">
                             <p class="text-sm text-gray-500 italic text-center mb-6">The custom control panel working together with the Gazebo environment and stereo vision cameras.</p>
                         </div>
