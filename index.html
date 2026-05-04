@@ -193,7 +193,6 @@
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <!-- Asegúrate de subir optical_tweezers.jpg a tu carpeta -->
                         <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
@@ -223,12 +222,12 @@
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-3')">
                     <div class="h-48 bg-slate-200 w-full">
-                        <img src="assets/images/keychain_production.jpg" alt="Mobile Manipulator" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
+                        <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Manipulator" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
                         <h3 class="text-xl font-bold mb-2">Automated Keychain Production Line</h3>
-                        <p class="text-gray-600 mb-4 flex-grow">I integrated a collaborative robot mounted on a mobile base to automate keychain production. This project combined autonomous navigation and task execution using ROS and industrial controllers. It also involved coordinating conveyors and an ABB dual arm YuMi robot.</p>
+                        <p class="text-gray-600 mb-4 flex-grow">I integrated a collaborative robotic arm mounted on an autonomous mobile base to automate keychain production. This project combined autonomous navigation, computer vision, PLC communication, and task execution to coordinate conveyors, a vertical storage unit, and an ABB dual arm YuMi robot.</p>
                         <span class="text-green-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
@@ -254,7 +253,7 @@
 
             <div class="space-y-6">
 
-                <!-- Repo 1: ROS2 Fruit Sorting (Clickable Card) -->
+                <!-- Repo 1: ROS2 Fruit Sorting -->
                 <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 cursor-pointer hover:border-blue-400 hover:shadow-xl transition" onclick="showSection('repo-detail-1')">
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
                         <h3 class="text-xl font-bold text-slate-800"><i class="fa-brands fa-github mr-2"></i> Collaborative Arm: Fruit Sorting Simulation</h3>
@@ -465,7 +464,7 @@
                 </div>
 
                 <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
-                    <img src="assets/images/keychain_production.jpg" alt="Keychain Production" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -475,15 +474,15 @@
                         
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Key Concepts</h4>
-                            <p class="text-gray-600 text-sm">System Integration, Autonomous Navigation, PLC Communication, Robot Safety</p>
+                            <p class="text-gray-600 text-sm">System Integration, Autonomous Navigation, Computer Vision, PLC Communication, Custom Hardware, Factory Simulation</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
-                            <p class="text-gray-600 text-sm">ROS, Python, Modbus, Custom GUI</p>
+                            <p class="text-gray-600 text-sm">ROS, Python, OpenCV, Modbus, RobotStudio, Tecnomatix, TIA Portal, Tkinter</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
-                            <p class="text-gray-600 text-sm">Mobile Manipulator (xArm on mobile base), ABB YuMi, Modula vertical storage, PLCs</p>
+                            <p class="text-gray-600 text-sm">Mobile Manipulator (xArm on mobile base), ABB YuMi, UR5, Modula storage, Siemens PLCs, Omron Vision sensors</p>
                         </div>
                     </div>
 
@@ -492,20 +491,23 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                I developed this project during the Cyberphysical Systems class of my Mechatronics Engineering bachelor degree. Successfully designing and integrating this complete production cell awarded me my minor specialty in Cyberphysical Systems. The main goal was to build a fully automated production line for keychains in collaboration with industry partners like Omron and Siemens.
+                                I developed this project during the Cyberphysical Systems class of my Mechatronics Engineering bachelor degree. Building this complete production cell awarded me my minor specialty in Cyberphysical Systems. The goal was to build a fully automated production line to assemble custom keychains. We collaborated with industry partners like Omron and Siemens inside the Smart Factory Monterrey.
                             </p>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">System Integration and Architecture</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                The physical setup integrated multiple industrial components working together. The core of the operation was a mobile manipulator, which consisted of a collaborative robotic arm mounted on an autonomous mobile base. I also connected conveyor belts, a vertical automated storage unit, and an ABB dual arm YuMi robot to handle the assembly tasks.
+                                The physical setup connected multiple industrial machines into a unified ecosystem. The core of the operation was the mobile manipulator (MoMa), consisting of an xArm collaborative robot mounted on an autonomous mobile base. I integrated this with conveyor belts, a Modula vertical automated storage unit, an ABB dual arm YuMi robot, and a stationary UR5 robotic arm to handle assembly and material handling tasks.
                             </p>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                To make all these separate machines talk to each other, I wrote Python scripts and implemented Modbus communication protocols with the industrial PLCs. I used ROS to handle the autonomous navigation of the mobile base so it could move freely around the factory floor.
+                                To ensure precise manipulation, I designed custom hardware and vision systems. I modeled custom camera mounts and fixtures in CAD to hold the keychains securely on the conveyor belts. The vision system used OpenCV to detect the exact position and orientation of parts, sending this data to the robotic grippers for a perfect pick.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Communication was handled via Modbus TCP/IP with Siemens PLCs. By reading specific holding registers and coils, my Python scripts synchronized the hardware across the entire cell. I used ROS and the actionlib library to send navigation goals to the mobile bases, while visualizing sensor data like laser scans and occupancy maps in RViz. To validate the entire factory flow, I used Tecnomatix Plant Simulation to optimize material handling and RobotStudio to program safe, collision free paths for the stationary robots.
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                I designed a central user interface to monitor and control the entire operation. This interface allowed operators to launch specific pick and place routines, check the mobile base battery, and manage the communication between the robotic arms and the storage unit. Throughout the process, I applied safety standards for collaborative robots to ensure the physical cell was safe for human operators.
+                                I designed a central user interface using Python and Tkinter, backed by a robust state machine logic, to monitor and control the entire operation. This interface allowed operators to launch pick and place routines and monitor battery levels. Throughout the process, I applied ANSI and RIA safety standards to ensure the physical cell was safe for human operators, successfully overcoming hardware challenges such as controller failures and mechanical stresses on custom grippers.
                             </p>
                         </div>
                     </div>
@@ -513,19 +515,78 @@
 
                 <!-- Media Gallery Section -->
                 <div class="border-t border-gray-200 pt-8 mt-8">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6">System Components and Interface</h3>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Project Media Gallery</h3>
                     
-                    <div class="space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Mobile Manipulator (MOMA)</h4>
-                            <img src="assets/images/keychain_moma.jpg" alt="Mobile Manipulator Robot" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
-                            <p class="text-sm text-gray-500 italic text-center mt-2">The collaborative robotic arm mounted on the autonomous mobile base.</p>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Fleet of Mobile Manipulators</h4>
+                            <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Manipulators" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Fleet of collaborative robots navigating the factory floor.</p>
                         </div>
-
                         <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Central Control Interface</h4>
-                            <img src="assets/images/keychain_interface.png" alt="Control Interface" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/1200x600/e2e8f0/475569?text=Image+Missing'">
-                            <p class="text-sm text-gray-500 italic text-center mt-2">The custom graphical user interface I built to manage routines, monitor battery, and control the robotic stations.</p>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">RViz Navigation Visualization</h4>
+                            <img src="assets/images/TEC_cyber_rviz.png" alt="RViz Map" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Visualizing laser scans and occupancy maps for autonomous navigation.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Tecnomatix Factory Simulation</h4>
+                            <img src="assets/images/TEC_cyber_tecnomatix.png" alt="Tecnomatix Simulation" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Optimizing the factory layout and material flow.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">UR5 Integration on Conveyor</h4>
+                            <img src="assets/images/TEC_cyber_UR5_conveyor.jpg" alt="UR5 Conveyor" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">The UR5 arm handling parts directly on the assembly line.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">UR5 Press Operation</h4>
+                            <img src="assets/images/TEC_cyber_UR5_press.jpg" alt="UR5 Press" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Collaborative arm interacting with an industrial press station.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Final Product Output</h4>
+                            <img src="assets/images/TEC_cyber_keychain.png" alt="Assembled Keychain" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">The custom keychains produced by the cell.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Automated Vertical Storage</h4>
+                            <img src="assets/images/TEC_cyber_mobile_vertical_storage.jpg" alt="Vertical Storage" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Integration with the Modula storage unit.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">RobotStudio Digital Twin</h4>
+                            <img src="assets/images/TEC_cyber_RobotStudio.png" alt="RobotStudio" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Simulating assembly paths to prevent hardware collisions.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Custom Camera Mount Design</h4>
+                            <img src="assets/images/TEC_cyber_camera_design.png" alt="Camera Design" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">3D printed mount for vision sensors.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Computer Vision Detection</h4>
+                            <img src="assets/images/TEC_cyber_computer_vision.png" alt="Computer Vision" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">OpenCV logic identifying part orientation.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Custom Fixture CAD</h4>
+                            <img src="assets/images/TEC_cyber_fixture.png" alt="Fixture Design" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">CAD modeling for production fixtures.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Fixture on Production Line</h4>
+                            <img src="assets/images/TEC_cyber_fixture_conveyor.png" alt="Physical Fixture" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Physical assembly on the conveyor belts.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Precision Pick-and-Place</h4>
+                            <img src="assets/images/TEC_cyber_gripper_pick.png" alt="Gripper Pick" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">Robotic arm executing a pick sequence.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Interface State Machine</h4>
+                            <img src="assets/images/TEC_cyber_interface_state_machine.png" alt="State Machine" class="w-full rounded-lg shadow-sm border border-gray-200 h-auto" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Image+Missing'">
+                            <p class="text-sm text-gray-500 italic mt-2">The logical state machine governing the GUI operations.</p>
                         </div>
                     </div>
                 </div>
