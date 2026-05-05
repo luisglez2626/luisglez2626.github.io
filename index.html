@@ -1350,6 +1350,13 @@
             if (displaySection(sectionId)) {
                 // Update the URL hash without triggering a page jump
                 history.pushState({ section: sectionId }, '', '#' + sectionId);
+                
+                // ¡NUEVO! Avisar a Google Analytics del cambio de página
+                if (typeof gtag === 'function') {
+                    gtag('event', 'page_view', {
+                        page_path: '/' + sectionId
+                    });
+                }
             }
         }
 
