@@ -300,7 +300,7 @@
                     </div>
                 </div>
 
-                <!-- NEW: Manipulator Modeling & Control -->
+                <!-- Manipulator Modeling & Control -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-6')">
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/ecn_manip_kuka.png" alt="Manipulator Modeling & Control" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
@@ -338,6 +338,19 @@
                         <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
                         <h3 class="text-xl font-bold mb-2">2-DoF Automated Gripper for Construction</h3>
                         <p class="text-gray-600 mb-4 flex-grow">Development of a 2 Degrees of Freedom linear gripper and rotational system for automated brick laying. Integrates precise motor control, structural CAD design, and real-time sensor feedback.</p>
+                        <span class="text-green-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
+                    </div>
+                </div>
+
+                <!-- NEW: Automated Robotic Welding Cell -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-7')">
+                    <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
+                        <img src="assets/images/TEC_welding_abb.png" alt="Automated Robotic Welding Cell" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-sm text-green-600 font-semibold mb-1">Tecnológico de Monterrey</div>
+                        <h3 class="text-xl font-bold mb-2">Automated Robotic Welding Cell</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Designed and simulated an automated robotic work cell for a laser welding production line. Integrated ABB industrial robots, custom pneumatic fixtures, and safety systems using RobotStudio and SolidWorks.</p>
                         <span class="text-green-600 font-bold mt-auto"><i class="fa-solid fa-plus mr-1"></i> View Details</span>
                     </div>
                 </div>
@@ -980,25 +993,91 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Kinematic Modeling</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                The foundation of the project involved establishing the Modified Denavit-Hartenberg (MDH) parameters for each robot. These parameters were used to computationally derive the kinematics:
+                                The foundation of the project involved establishing the Modified Denavit-Hartenberg (MDH) parameters for each robot. These parameters were used to computationally derive the kinematics. Direct Geometric Model algorithms were written to calculate the exact pose of the end-effector in Cartesian space based on the given joint configurations. The Jacobian matrix was computed to relate the joint velocities to the operational velocity of the end-effector. Additionally, complex trigonometric solvers were implemented as Inverse Kinematics to calculate the required joint angles needed to position the robot's end-effector at a desired target pose.
                             </p>
-                            <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-3">
-                                <li><strong>Direct Geometric Model (Forward Kinematics):</strong> Algorithms were written to calculate the exact pose (position and orientation) of the end-effector in Cartesian space based on the given joint configurations.</li>
-                                <li><strong>Direct Kinematic Model (Jacobian):</strong> The Jacobian matrix was computed to relate the joint velocities to the operational velocity (twist) of the end-effector.</li>
-                                <li><strong>Inverse Kinematics:</strong> Complex trigonometric solvers were implemented to calculate the required joint angles needed to position the robot's end-effector at a desired target pose.</li>
-                            </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-bold text-slate-800 mb-2">Trajectory Generation and Control</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                With the mathematical models established, various point-to-point control strategies were implemented to guide the robots:
+                                With the mathematical models established, various point-to-point control strategies were implemented to guide the robots. Joint Space Interpolation calculated trajectories to move the robot smoothly between initial and final joint configurations. Cartesian Space Interpolation utilized the Inverse Geometric Model to force the end-effector to follow a straight 3D line in operational space by sequentially reaching closely calculated intermediary poses. Furthermore, Jacobian-Based Control sent continuous joint velocity commands, calculated via the Jacobian pseudo-inverse, to drive the end-effector toward the desired pose in a straight line while minimizing pose error.
                             </p>
-                            <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-3">
-                                <li><strong>Joint Space Interpolation:</strong> Calculating trajectories to move the robot smoothly between initial and final joint configurations.</li>
-                                <li><strong>Cartesian Space Interpolation:</strong> Utilizing the Inverse Geometric Model to force the end-effector to follow a straight 3D line in operational space by sequentially reaching closely calculated intermediary poses.</li>
-                                <li><strong>Jacobian-Based Control:</strong> Sending continuous joint velocity commands, calculated via the Jacobian pseudo-inverse, to drive the end-effector toward the desired pose in a straight line while minimizing pose error.</li>
-                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail: Automated Robotic Welding Cell -->
+        <section id="project-detail-7" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-green-600 hover:text-green-800 font-medium">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back to Projects
+            </button>
+            <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+                <div class="mb-6">
+                    <span class="inline-block bg-green-100 text-green-800 py-1 px-3 rounded-full text-sm font-semibold mb-3">Tecnológico de Monterrey - Robot Design and Development</span>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-4">Design and Simulation of an Automated Robotic Welding Cell</h1>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="w-full h-64 md:h-96 bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm flex items-center justify-center">
+                    <img src="assets/images/TEC_welding_abb.png" alt="Automated Robotic Welding Cell" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <!-- Project Highlights (Left Col) -->
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Technical Overview</h3>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Core Skills</h4>
+                            <p class="text-gray-600 text-sm">Robotic Simulation, Mechanical Design, System Integration, Industrial Safety</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
+                            <p class="text-gray-600 text-sm">ABB RobotStudio, SolidWorks</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
+                            <p class="text-gray-600 text-sm">ABB IRB 4600, ABB IRB 1410, Pneumatic Actuators, Cognex Camera System</p>
+                        </div>
+                    </div>
+
+                    <!-- Description & Architecture (Right Col) -->
+                    <div class="md:col-span-2">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Overview</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                This project focuses on the comprehensive design, simulation, and integration of an automated robotic work cell tailored for a laser welding production line. The primary objective was to engineer a robust, efficient solution to replace manual welding operations, optimizing production time while adhering to strict industrial safety and quality standards.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Robotic Hardware and Coordination</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The manufacturing cell centers around the synchronized operation of two distinct industrial robotic arms. An ABB IRB 4600 serves as the primary welding unit, selected for its specific reach and payload capabilities to maneuver the laser welding tool along precise trajectories across the workpieces. Additionally, an ABB IRB 1410 operates as an auxiliary handling unit, responsible for picking up and holding the secondary component precisely in place on top of the base plate during the welding process.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Workholding and Actuation</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                To ensure absolute stability during high-precision laser welding, the base plates are secured using a custom-designed fixture. This fixture integrates two pneumatic clamp actuators that automatically lock the base plates onto the conveyor before the auxiliary robot positions the top piece and the welding sequence begins.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Software Architecture and Simulation</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The entire work cell was developed and validated virtually prior to physical implementation. ABB RobotStudio served as the core platform for 3D layout planning, virtual commissioning, and offline programming of both robotic arms. It was also utilized to parameterize and configure the integrated Cognex camera system, establishing the communication and logic for the machine vision quality control inspections. SolidWorks was employed for the precise mechanical design of all custom components within the cell, including the design of the pneumatic work-holding fixtures, safety fencing, and the specific connection flanges required to mount the welding tool to the robot's Tool Center Point.
+                            </p>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Safety and Industrial Standards</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                The robotic station was engineered with strict adherence to industrial safety regulations. The cell incorporates a mechanized conveyor system for part transit, physical perimeter fencing, laser safety sensors, and emergency stop mechanisms, ensuring a secure operational environment compliant with ISO safety standards.
+                            </p>
                         </div>
                     </div>
                 </div>
