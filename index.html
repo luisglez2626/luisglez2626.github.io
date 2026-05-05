@@ -27,7 +27,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="text-xl font-bold cursor-pointer hover:text-blue-400 transition" onclick="showSection('home')">
-                    <i class="fa-solid fa-robot mr-2"></i> Luis González
+                    <i class="fa-solid fa-robot mr-2"></i> Luis Glez
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-6">
@@ -193,7 +193,6 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-1')">
-                    <!-- Kept object-contain for the thumbnails so they stay perfectly inside the card -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -206,7 +205,6 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-2')">
-                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Cobotic Assistant" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -224,7 +222,6 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-3')">
-                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Manipulator" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -237,7 +234,6 @@
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col border border-gray-100 cursor-pointer hover:shadow-xl transition" onclick="showSection('project-detail-4')">
-                    <!-- Kept object-contain for the thumbnails -->
                     <div class="h-48 bg-slate-200 w-full flex items-center justify-center">
                         <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="max-w-full max-h-full object-contain" onerror="this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Missing'">
                     </div>
@@ -294,9 +290,9 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Micro-scale Particle Manipulation Using Bilateral Control</h1>
                 </div>
                 
-                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
-                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
-                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                <!-- Improved height-constrained Hero Image -->
+                <div class="w-full h-64 md:h-96 bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm flex items-center justify-center">
+                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -468,96 +464,54 @@
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">Automated Keychain Production Line</h1>
                 </div>
 
-                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
-                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
-                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                <!-- Improved height-constrained Hero Image -->
+                <div class="w-full h-64 md:h-96 bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm flex items-center justify-center">
+                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <!-- Project Highlights (Left Col) -->
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-lg mb-4 text-slate-800 border-b border-slate-300 pb-2">Project Highlights</h3>
+                        
                         <div class="mb-4">
-                            <h4 class="font-semibold text-gray-700 text-sm">Purpose</h4>
-                            <p class="text-gray-600 text-sm">To achieve complete autonomy in a manufacturing line using cyber-physical systems.</p>
+                            <h4 class="font-semibold text-gray-700 text-sm">Core Skills</h4>
+                            <p class="text-gray-600 text-sm">System Integration, Autonomous Navigation, Computer Vision, PLC Communication, Custom Hardware, Factory Simulation</p>
                         </div>
                         <div class="mb-4">
-                            <h4 class="font-semibold text-gray-700 text-sm">Key Technologies</h4>
-                            <p class="text-gray-600 text-sm">Computer Vision, Digital Twin, and Autonomous Navigation.</p>
+                            <h4 class="font-semibold text-gray-700 text-sm">Software Tools</h4>
+                            <p class="text-gray-600 text-sm">ROS, Python, OpenCV, Modbus, RobotStudio, Tecnomatix, TIA Portal</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 text-sm">Hardware</h4>
+                            <p class="text-gray-600 text-sm">Mobile Manipulator (xArm on mobile base), ABB YuMi, UR5, Modula storage, Siemens PLCs</p>
                         </div>
                     </div>
 
                     <!-- Description & Pipeline (Right Col) -->
                     <div class="md:col-span-2">
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Overview</h3>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Context</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                This project involved automating a manufacturing plant at Tecnológico de Monterrey to produce customized keychains with no human intervention. The goal was to integrate mobile robots, collaborative arms, and digital twin technology to create a self-regulating "Industry 4.0" system.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                The process was designed to handle orders of at least 5 keychains, starting from an electronic tablet and ending with a finished product in under 30 minutes.
+                                I developed this project during the Cyberphysical Systems class of my Mechatronics Engineering bachelor degree. Building this complete production cell awarded me my minor specialty in Cyberphysical Systems. The goal was to build a fully automated production line to assemble custom keychains. We collaborated with industry partners like Siemens.
                             </p>
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Project Pipeline</h3>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">System Integration and Architecture</h3>
                             <p class="text-gray-700 leading-relaxed mb-3">
-                                The system follows a synchronized sequence managed by Modbus communication and PLC logic:
+                                The physical setup connected multiple industrial machines into a unified ecosystem. The core of the operation was the mobile manipulator (MoMa), consisting of an xArm collaborative robot mounted on an autonomous mobile base. I integrated this with conveyor belts, a Modula vertical automated storage unit, an ABB dual arm YuMi robot, and a stationary UR5 robotic arm to handle assembly and material handling tasks.
                             </p>
-                            <ol class="list-decimal pl-5 space-y-2 text-gray-700 mb-4">
-                                <li><strong>Material Retrieval:</strong> A Smart Mobile Robot travels to the Modula (vertical warehouse) to receive the raw material (acrylic pieces).</li>
-                                <li><strong>Transport to UR Station:</strong> The mobile robot carries the fixture to the Universal Robot (UR) station for initial pressing.</li>
-                                <li><strong>Conveyor Movement:</strong> The PLC S7-300 manages the conveyor to move the fixture through checkpoints.</li>
-                                <li><strong>Assembly at YuMi:</strong> The mobile robot moves the fixture to the ABB YuMi station for gluing and final assembly steps.</li>
-                                <li><strong>Unloading:</strong> The mobile robot places the finished keychain in a designated storage spot.</li>
-                            </ol>
-
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                To ensure precise manipulation, I designed custom hardware and vision systems. I modeled custom camera mounts and fixtures in CAD to hold the keychains securely on the conveyor belts. The vision system used OpenCV to detect the exact position and orientation of parts, sending this data to the robotic grippers for a perfect pick.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Communication was handled via Modbus TCP/IP with Siemens PLCs. By reading specific holding registers and coils, my Python scripts synchronized the hardware across the entire cell. I used ROS and the actionlib library to send navigation goals to the mobile bases, while visualizing sensor data like laser scans and occupancy maps in RViz. To validate the entire factory flow, I used Tecnomatix Plant Simulation to optimize material handling and RobotStudio to program safe, collision free paths for the stationary robots.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                I designed a central user interface using Python and Tkinter, backed by a robust state machine logic, to monitor and control the entire operation. This interface allowed operators to launch pick and place routines and monitor battery levels. Throughout the process, I applied ANSI and RIA safety standards to ensure the physical cell was safe for human operators, successfully overcoming hardware challenges such as controller failures and mechanical stresses on custom grippers.
+                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Hardware, Software, and Tools Table -->
-                <div class="mb-10">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Hardware, Software, and Tools</h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-                            <thead class="bg-slate-100">
-                                <tr>
-                                    <th class="py-3 px-4 border-b text-left font-semibold text-gray-800 w-1/4">Category</th>
-                                    <th class="py-3 px-4 border-b text-left font-semibold text-gray-800">Components Used</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-gray-700 divide-y divide-gray-100">
-                                <tr>
-                                    <td class="py-3 px-4 font-medium">Robots</td>
-                                    <td class="py-3 px-4">ABB YuMi (Collaborative), UR5 (Collaborative), 2 Smart Mobile Robots with xArm v5 arms.</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4 font-medium">Hardware</td>
-                                    <td class="py-3 px-4">Jetson Nano, ZED 2 Stereo Camera, Lidar</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4 font-medium">PLC Systems</td>
-                                    <td class="py-3 px-4">Siemens S7-1500 (Master/Client), S7-1200 (YuMi control), S7-300 (Conveyor/UR control).</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4 font-medium">Software</td>
-                                    <td class="py-3 px-4">ROS (Robot Operating System), ABB RobotStudio, Process Simulate (Tecnomatix), SOLIDWORKS.</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4 font-medium">Vision/AI</td>
-                                    <td class="py-3 px-4">OpenCV (Python), HSV Filters for circle detection, Regression models for predictive maintenance.</td>
-                                </tr>
-                                <tr class="bg-gray-50">
-                                    <td class="py-3 px-4 font-medium">IoT/Data</td>
-                                    <td class="py-3 px-4">PI Vision, PI System Explorer, Modbus TCP/IP protocols.</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 px-4 font-medium">Machinery</td>
-                                    <td class="py-3 px-4">Modula Warehouse, Laser Cutter, CNC EMCO Machine.</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
 
@@ -650,9 +604,9 @@
                 <div class="mb-6">
                     <h1 class="text-3xl font-bold text-slate-900 mb-4">RC Car Manufacturing Cell</h1>
                 </div>
-                <!-- Fixed Hero Image: Removed forced height, using h-auto to adapt to photo -->
-                <div class="w-full bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm">
-                    <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="w-full h-auto" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
+                <!-- Improved height-constrained Hero Image -->
+                <div class="w-full h-64 md:h-96 bg-gray-50 rounded-lg overflow-hidden mb-8 border border-gray-200 shadow-sm flex items-center justify-center">
+                    <img src="assets/images/rc_car_cell.jpg" alt="Manufacturing Cell" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Image+Missing'">
                 </div>
                 <p class="text-gray-700 leading-relaxed">
                     This page is ready for you to add your specific project information. You can detail the PLC logic, conveyor control, and RobotStudio digital twin setup.
