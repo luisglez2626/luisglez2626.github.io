@@ -439,6 +439,19 @@
                         <span class="text-slate-800 font-semibold text-sm mt-auto group-hover:translate-x-1 transition-transform inline-flex items-center"><i class="fa-solid fa-arrow-right mr-2"></i> Technical Details</span>
                     </div>
                 </div>
+
+                <!-- ATIS John Deere -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 cursor-pointer hover:shadow-lg transition group" onclick="showSection('project-detail-8')">
+                    <div class="h-48 bg-slate-100 w-full flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/TEC_JohnDeere_prototype.png" alt="Automatic Tire Inflation System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="text-xs text-slate-500 font-bold tracking-wider uppercase mb-2">Tecnológico de Monterrey & John Deere</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Automatic Tire Inflation System</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Design and implementation of an RTOS-driven embedded system prototype for dynamic tractor tire pressure regulation, featuring PID control and active leakage compensation.</p>
+                        <span class="text-slate-800 font-semibold text-sm mt-auto group-hover:translate-x-1 transition-transform inline-flex items-center"><i class="fa-solid fa-arrow-right mr-2"></i> Technical Details</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -895,6 +908,67 @@
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
                                 The architectural layout inherently adheres to ISO safety protocols, featuring automated conveyor interlocks, physical perimeter barriers, and safety laser scanners to ensure an uncompromised operational envelope.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail: ATIS John Deere -->
+        <section id="project-detail-8" class="section-view">
+            <button onclick="showSection('projects')" class="mb-6 text-slate-500 hover:text-slate-800 font-medium flex items-center transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Return to Projects
+            </button>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-10">
+                <div class="mb-6 flex flex-col items-start">
+                    <span class="inline-block bg-slate-100 text-slate-700 border border-slate-200 py-1 px-3 rounded text-xs font-bold uppercase tracking-wider mb-3">Embedded Systems • Corporate Collaboration</span>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Automatic Tire Inflation System (ATIS)</h1>
+                    <p class="text-gray-500">Tecnológico de Monterrey / John Deere</p>
+                </div>
+
+                <div class="w-full h-64 md:h-96 bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner flex items-center justify-center">
+                    <img src="assets/images/TEC_JohnDeere_prototype.png" alt="ATIS Prototype" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
+                        <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Architecture</h4>
+                            <p class="text-gray-600 text-sm">Embedded Systems, RTOS, PID Control, Pneumatic Actuation</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Software Stack</h4>
+                            <p class="text-gray-600 text-sm">C/C++, STM32 IDE</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Hardware Network</h4>
+                            <p class="text-gray-600 text-sm">STM32 (ARM Cortex-M3), Pressure Transducers, 12V Mini-Compressor, Electro-pneumatic Valves</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Project Directive</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                Developed in technical collaboration with John Deere, this project focused on the design and implementation of a functional prototype for an Automatic Tire Inflation System (ATIS) featuring integrated air leakage control. The primary objective was to engineer a dedicated embedded solution capable of optimizing tractor performance by dynamically adjusting tire pressure in response to varying soil conditions.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                By automating pressure regulation to specific operator setpoints, the system aims to increase machine efficiency, reduce tire wear, and significantly improve traction on weak bearing soils while ensuring seamless transitions to harder surfaces such as asphalt.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Embedded Architecture & Control Logic</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                The prototype's architecture relies on an STM32 (ARM Cortex-M3) microcontroller operating as the central processing unit. Firmware was developed utilizing a Real-Time Operating System (RTOS) to manage concurrent task execution—specifically sensor data acquisition, control logic evaluation, and user interface updates—guaranteeing deterministic behavior and overall system stability.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                To regulate the inherently non-linear behavior of compressed air, a PID (Proportional-Integral-Derivative) controller was authored. This logic enables the system to rapidly achieve target pressures with minimal overshoot, maintaining stability despite external fluctuations. Furthermore, active air leakage compensation logic was integrated; if a pressure drop below a specific threshold is detected during operation, the PID controller automatically re-engages the compressor array, ensuring the vehicle remains operational even in the event of minor tire damage.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                The physical prototype integrated high-precision pressure transducers providing closed-loop feedback, a 12V DC mini-compressor, and cross-connected electro-pneumatic valves. Operators interacted with the system via a dedicated interface featuring an LCD for real-time monitoring and analog potentiometer inputs for setpoint adjustment. The resulting proof-of-concept successfully demonstrated the viability of automated, microcontroller-based systems in managing complex pneumatic variables for large-scale agricultural machinery.
                             </p>
                         </div>
                     </div>
