@@ -339,7 +339,6 @@
                 <!-- Teleoperation -->
                 <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 cursor-pointer hover:shadow-lg transition group" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-100 w-full flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10 border border-amber-200">WIP</div>
                         <img src="assets/images/KEIO_thesis_thumnail.png" alt="Optical Tweezers" class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
@@ -489,10 +488,7 @@
             </button>
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-10">
                 <div class="mb-6 flex flex-col items-start">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 py-1 px-3 rounded text-xs font-bold uppercase tracking-wider">Master Thesis</span>
-                        <span class="inline-block bg-amber-100 text-amber-800 border border-amber-200 py-1 px-3 rounded text-xs font-bold uppercase tracking-wider">Work In Progress</span>
-                    </div>
+                    <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 py-1 px-3 rounded text-xs font-bold uppercase tracking-wider mb-3">Master Thesis</span>
                     <h1 class="text-3xl font-bold text-slate-900 mb-2">Micro-scale Particle Manipulation Using Bilateral Control</h1>
                     <p class="text-gray-500">Keio University, Tokyo</p>
                 </div>
@@ -1319,18 +1315,57 @@
 
     <!-- Navigation Script -->
     <script>
-        function showSection(sectionId) {
+        // Core function to handle the visual transition
+        function displaySection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            if (!targetSection) return false;
+
             const sections = document.querySelectorAll('.section-view');
             sections.forEach(sec => sec.classList.remove('active'));
             
-            document.getElementById(sectionId).classList.add('active');
+            targetSection.classList.add('active');
             window.scrollTo({top: 0, behavior: 'smooth'});
 
             const mobileMenu = document.getElementById('mobile-menu');
             if(!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
+            return true;
         }
+
+        // Wrapper function called by buttons/links that also updates the URL
+        function showSection(sectionId) {
+            if (displaySection(sectionId)) {
+                // Update the URL hash without triggering a page jump
+                history.pushState({ section: sectionId }, '', '#' + sectionId);
+            }
+        }
+
+        // Handle browser Back/Forward buttons
+        window.addEventListener('popstate', function(event) {
+            let sectionId = 'home';
+            if (event.state && event.state.section) {
+                sectionId = event.state.section;
+            } else if (window.location.hash) {
+                sectionId = window.location.hash.substring(1);
+            }
+            displaySection(sectionId);
+        });
+
+        // Read URL on page load to open directly shared links
+        document.addEventListener('DOMContentLoaded', () => {
+            let initialSection = 'home';
+            if (window.location.hash) {
+                const hashSection = window.location.hash.substring(1);
+                // Verify the hash matches a real section ID
+                if (document.getElementById(hashSection)) {
+                    initialSection = hashSection;
+                }
+            }
+            displaySection(initialSection);
+            // Establish the base state in browser history
+            history.replaceState({ section: initialSection }, '', '#' + initialSection);
+        });
 
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
