@@ -340,7 +340,7 @@
                 <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 cursor-pointer hover:shadow-lg transition group" onclick="showSection('project-detail-1')">
                     <div class="h-48 bg-slate-100 w-full flex items-center justify-center relative overflow-hidden">
                         <div class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm z-10 border border-amber-200">WIP</div>
-                        <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
+                        <img src="assets/images/KEIO_thesis_thumnail.png" alt="Optical Tweezers" class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-xs text-blue-600 font-bold tracking-wider uppercase mb-2">Keio University</div>
@@ -500,20 +500,24 @@
                 </div>
                 
                 <div class="w-full h-64 md:h-96 bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner flex items-center justify-center">
-                    <img src="assets/images/optical_tweezers.jpg" alt="Optical Tweezers" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
+                    <img src="assets/images/KEIO_thesis_thumnail.png" alt="Optical Tweezers" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         
                         <div class="mb-4">
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
+                            <p class="text-gray-600 text-sm">Bilateral Teleoperation, Admittance Control, Reaction-Force Observer (RFOB), Optical Trap Calibration</p>
+                        </div>
+                        <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Software Integration</h4>
-                            <p class="text-gray-600 text-sm">MATLAB, C++, OpenCV</p>
+                            <p class="text-gray-600 text-sm">C++, Python, OpenCV</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Hardware Components</h4>
-                            <p class="text-gray-600 text-sm">Motorized stage, Laser controller, High-speed Camera, Linear Motor</p>
+                            <p class="text-gray-600 text-sm">Thorlabs CDL1015 Laser, 100x Oil-Immersion Objective, Thorlabs Zelux CMOS Camera, Custom 2-Axis Linear Motors, Motorized Stage</p>
                         </div>
                     </div>
 
@@ -521,21 +525,81 @@
                         <div class="mb-8">
                             <h3 class="text-xl font-bold text-slate-800 mb-3">Project Context</h3>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                Optical tweezers utilize a highly focused laser beam to hold and move microscopic objects. The objective of this thesis is to enable a human operator to physically feel microscopic forces while manipulating these particles. The resulting system functions as a haptic bridge between the macroscopic human environment and the microscopic cellular world.
+                                This project focuses on bridging the sensory gap in biological micromanipulation procedures, such as Intracytoplasmic Sperm Injection. Operators normally rely entirely on visual information to guess the forces applied to fragile cells. To solve this, a 2-axis bilateral teleoperation system was designed to pair a custom-built haptic master device with an optical tweezers slave manipulator. The system translates the macroscopic hand movements of the operator into precise microscopic actions, allowing the user to physically feel piconewton-scale interaction forces.
                             </p>
                         </div>
 
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">Development Architecture</h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                Hardware was initially configured to process image data from a microscope camera, utilizing visual information to track microparticle positions in real-time.
+                                The hardware utilizes a Thorlabs CDL1015 continuous wave laser at 976 nanometers focused through a 100x oil-immersion objective to create the optical trap. The master interface features two linear motors equipped with high-resolution encoders.
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                Subsequent system calibration involved an experimental cross-validation technique to measure trap stiffness. This step is essential for accurately calculating the otherwise imperceptible forces acting upon the particle within the fluid.
+                                The software architecture relies on a C++ high-frequency control loop to manage an admittance control scheme. To provide force feedback without a dedicated physical sensor, the system incorporates a Reaction-Force Observer that estimates the interaction forces based on real-time tracking. A Disturbance Observer is also utilized to estimate and cancel out external mechanical disturbances on the linear motors, ensuring the operator only feels the true micro-environment forces.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                For position tracking, a custom computer vision algorithm was implemented in Python using OpenCV. The software applies a Gaussian blur to reduce noise and uses thresholding to isolate the laser center. It then applies sub-pixel corner detection to accurately find the centroid of the trapped particle. This positional data is sent to the main controller via socket communication to calculate the exact forces.
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                Finally, an admittance-based bilateral control law was implemented. Tactile feedback is transmitted to a linear motor via a reaction force observer. This architecture enables the operator to manually drive the motor and experience corresponding physical resistance when the target microparticle encounters obstacles.
+                                Accurate force estimation requires calculating the optical trap stiffness. The project evaluated several passive calibration techniques. The Equipartition, Boltzmann, and Mean Squared Displacement methods proved reliable. The Power Spectral Density analysis overestimated the stiffness because the camera's limited sampling rate of 107.9 Hz introduced motion blur and aliasing.
                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Gallery Section -->
+                <div class="border-t border-gray-100 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Project Media Gallery</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">ICSI Application</h4>
+                            <img src="assets/images/KEIO_thesis_IVF.png" alt="ICSI Procedure" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">An illustration showing an Intracytoplasmic Sperm Injection procedure, demonstrating the traditional method versus the application of optical tweezers for non-contact immobilization.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Optical Tweezer Setup</h4>
+                            <img src="assets/images/KEIO_thesis_systen.png" alt="Commercial Kit" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A photograph of the commercial optical tweezer breadboard kit used as the foundation for the slave manipulator.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">System Diagram</h4>
+                            <img src="assets/images/KEIO_thesis_diagram.png" alt="System Diagram" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A block diagram outlining the robotic cell manipulation setup, detailing the laser path, motorized stage, and camera field of view.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Linear Spring Model</h4>
+                            <img src="assets/images/KEIO_thesis_spring.png" alt="Spring Concept" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A conceptual diagram showing how the optical trap acts as a linear spring, applying a restoring force proportional to the displacement of the particle.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Vision Algorithm</h4>
+                            <img src="assets/images/KEIO_thesis_particle_detection.png" alt="Particle Detection" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A visual demonstration of the OpenCV particle detection algorithm successfully tracking the centroid of a bead under different illumination settings.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Radial Force Profile</h4>
+                            <img src="assets/images/KEIO_thesis_radial_forces.png" alt="Radial Forces" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A graph displaying the predicted radial optical force profile for a 2.06 micrometer sphere, highlighting the gradient and scattering force components.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Axial Force Profile</h4>
+                            <img src="assets/images/KEIO_thesis_axial_forces.png" alt="Axial Forces" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A graph showing the predicted axial optical force profile, indicating the stable equilibrium point of the optical trap.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Trap Calibration</h4>
+                            <img src="assets/images/KEIO_thesis_Calibration.png" alt="Trap Calibration" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">Charts showing the potential energy profile and harmonic fit used during the Boltzmann statistics calibration method to determine trap stiffness.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Position Tracking</h4>
+                            <img src="assets/images/KEIO_thesis_Leader_vs_Follower_position.png" alt="Leader vs Follower" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A plot demonstrating the position tracking performance, showing how closely the scaled follower device matches the leader position during teleoperation.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">Force Feedback Validation</h4>
+                            <img src="assets/images/KEIO_thesis_RFOE_vs_optical_force.png" alt="Force Validation" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">A graph comparing the reaction force observer estimate against the scaled optical force, validating the accuracy of the haptic feedback provided to the operator.</p>
                         </div>
                     </div>
                 </div>
@@ -564,127 +628,6 @@
                         
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
-                            <p class="text-gray-600 text-sm">Impedance Control, Kinematics, Jacobian, Task Distribution, Manipulability Index</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Software Environment</h4>
-                            <p class="text-gray-600 text-sm">MATLAB, Simulink</p>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Hardware Models</h4>
-                            <p class="text-gray-600 text-sm">KUKA iiwa 7 R800 (7-DoF), RRR Serial Robot (3-DoF)</p>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-2">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-bold text-slate-800 mb-3">System Objective</h3>
-                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                Simulation development for the hand guidance of a macro-micro redundant robotic system. The initiative aims to assist in percutaneous medical interventions, where enhanced medical gestures lead to improved patient care, reduced intervention costs, and optimized ergonomic conditions for surgeons.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-sm">
-                                The complete architecture was modeled using MATLAB and Simulink, pairing a heavy 7-DoF KUKA robot (acting as the macro system) with a smaller 3-DoF robotic mechanism (the micro system).
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-3">Control & Kinematics Strategy</h3>
-                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                Robot configurations were initially defined utilizing Denavit-Hartenberg parameters to compute forward kinematics and Jacobian matrices. The manipulability index—a critical safety metric indicating proximity to mechanical singularities—was continuously derived from these matrices to ensure secure operations.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                A core operational requirement mandated position control with a fixed orientation for the macro arm, while the micro robot operated exclusively via torque control. A computed torque controller featuring an impedance control law was engineered for the surgical tool. This configuration allows the mechanism to function as a virtual spring and damper, yielding safely to applied surgical forces and rendering the heavy macro robot virtually weightless during manual hand guidance.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-sm">
-                                To unify both machines, a dynamic task distribution algorithm was implemented. By monitoring the micro-robot's physical extension (distance AB) and current manipulability index, the algorithm evaluates and dictates in real-time whether the macro arm should assist movement or if the micro tool possesses sufficient workspace to operate independently.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video -->
-                <div class="w-full mb-10 rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
-                    <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/05S68OqM6BU" title="Simulation Output Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-                <!-- Media Gallery Section -->
-                <div class="border-t border-gray-100 pt-8 mt-8">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Simulation Architecture & Results</h3>
-                    
-                    <div class="space-y-12">
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Macro Micro Robot Configuration</h4>
-                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full max-w-sm mx-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/600x800/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">General Control Diagram</h4>
-                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Diagram" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Torque Control Diagram</h4>
-                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control Diagram" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Micro Robot Kinematic Points (Length AB)</h4>
-                            <img src="assets/images/ECN_research_lengthAB.png" alt="Micro Robot Points A and B" class="w-full max-w-sm mx-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/600x600/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-sm text-gray-500 italic text-center mt-2">The distance between point A and point B dictates the task distribution gain.</p>
-                        </div>
-
-                        <!-- Graphs -->
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Adaptive Gain and Manipulability Index</h4>
-                            <img src="assets/images/ECN_research_graph_gain.png" alt="Adaptive Gain Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Desired Cartesian Displacement</h4>
-                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Displacement Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Measured vs Desired Global Trajectory</h4>
-                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Global Trajectory Graph" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-
-                        <!-- Simulink Annexes -->
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">Simulink Models (Annexes)</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <img src="assets/images/ECN_research_annex_17.png" alt="Simulink Model 17" class="w-full h-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/800x400/f1f5f9/94a3b8?text=Image+Pending'">
-                                <img src="assets/images/ECN_research_annex_19.png" alt="Simulink Model 19" class="w-full h-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/800x400/f1f5f9/94a3b8?text=Image+Pending'">
-                                <img src="assets/images/ECN_research_annex_20.png" alt="Simulink Model 20" class="w-full h-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/800x400/f1f5f9/94a3b8?text=Image+Pending'">
-                                <img src="assets/images/ECN_research_annex_21.png" alt="Simulink Model 21" class="w-full h-auto rounded-lg shadow-sm border border-slate-200 object-contain" onerror="this.src='https://placehold.co/800x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Detail: Automated Keychain -->
-        <section id="project-detail-3" class="section-view">
-            <button onclick="showSection('projects')" class="mb-6 text-slate-500 hover:text-slate-800 font-medium flex items-center transition">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Return to Projects
-            </button>
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-10">
-                <div class="mb-6 flex flex-col items-start">
-                    <span class="inline-block bg-slate-100 text-slate-700 border border-slate-200 py-1 px-3 rounded text-xs font-bold uppercase tracking-wider mb-3">Capstone • Cyberphysical Systems</span>
-                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Automated Production Line</h1>
-                    <p class="text-gray-500">Tecnológico de Monterrey</p>
-                </div>
-
-                <div class="w-full h-64 md:h-96 bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner flex items-center justify-center">
-                    <img src="assets/images/TEC_cyber_mobile_robots.png" alt="Mobile Robots" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                    <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
-                        <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
-                        
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Architecture</h4>
                             <p class="text-gray-600 text-sm">Autonomous Navigation, Computer Vision, PLC Communication, Custom Hardware, Factory Simulation</p>
                         </div>
                         <div class="mb-4">
@@ -868,7 +811,7 @@
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         
                         <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Competencies</h4>
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
                             <p class="text-gray-600 text-sm">Mechanical Design, Motor Control, Sensor Integration, State Machine Logic</p>
                         </div>
                         <div class="mb-4">
@@ -973,7 +916,7 @@
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Competencies</h4>
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
                             <p class="text-gray-600 text-sm">Mechanical Design, Mathematical Optimization, Kinematics, Singularity Analysis</p>
                         </div>
                         <div class="mb-4">
@@ -1031,7 +974,7 @@
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Architecture</h4>
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
                             <p class="text-gray-600 text-sm">Kinematics, Jacobian Computation, Trajectory Generation</p>
                         </div>
                         <div class="mb-4">
@@ -1090,7 +1033,7 @@
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Architecture</h4>
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
                             <p class="text-gray-600 text-sm">Robotic Simulation, Mechanical Design, System Integration</p>
                         </div>
                         <div class="mb-4">
@@ -1148,7 +1091,7 @@
                     <div class="md:col-span-1 bg-slate-50 p-6 rounded-lg border border-slate-200 h-fit">
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Technical Specifications</h3>
                         <div class="mb-4">
-                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Architecture</h4>
+                            <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Core Concepts</h4>
                             <p class="text-gray-600 text-sm">Embedded Systems, RTOS, PID Control, Pneumatic Actuation</p>
                         </div>
                         <div class="mb-4">
