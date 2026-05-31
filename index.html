@@ -684,19 +684,20 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Repo 1: ROS2 Fruit Sorting -->
+                <!-- Repo 1: ROS 2 Modular Architecture -->
                 <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 cursor-pointer hover:shadow-lg transition group" onclick="showSection('repo-detail-1')">
                     <div class="h-48 bg-slate-100 w-full flex items-center justify-center overflow-hidden">
-                        <img src="assets/images/SimulationPickPlace_thumbnail.jpg" alt="Fruit Sorting Simulation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
+                        <img src="assets/images/SimulationPickPlace_thumbnail.jpg" alt="Modular ROS 2 Architecture" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <div class="text-xs text-blue-600 font-bold tracking-wider uppercase mb-2">ROS 2 • Gazebo • CV</div>
+                        <div class="text-xs text-blue-600 font-bold tracking-wider uppercase mb-2">ROS 2 • Modern Gazebo • Modular</div>
                         <h3 class="text-xl font-bold text-slate-900 mb-3">
-                            <span class="lang-en">Collaborative Arm: Fruit Sorting</span><span class="lang-fr hidden">Bras Collaboratif : Tri de Fruits</span>
+                            <span class="lang-en">Modular ROS 2: Fruit Sorting</span>
+                            <span class="lang-fr hidden">ROS 2 Modulaire : Tri de Fruits</span>
                         </h3>
                         <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">
-                            <span class="lang-en">A comprehensive ROS 2 and Gazebo simulation utilizing stereo vision to detect targets and an inverse kinematics solver for autonomous pick-and-place sorting.</span>
-                            <span class="lang-fr hidden">Une simulation complète sous ROS 2 et Gazebo utilisant la vision stéréoscopique pour détecter les cibles et un solveur de cinématique inverse pour un tri autonome (prise et dépose).</span>
+                            <span class="lang-en">A modular ROS 2 architecture featuring strict package separation. Simulates an autonomous pick-and-place pipeline utilizing stereo vision and inverse kinematics in modern Gazebo (Ignition).</span>
+                            <span class="lang-fr hidden">Une architecture ROS 2 modulaire avec séparation stricte des paquets. Simule un pipeline de tri autonome (prise et dépose) utilisant la vision stéréoscopique et la cinématique inverse dans le nouveau Gazebo (Ignition).</span>
                         </p>
                         <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
                             <div class="flex space-x-3">
@@ -801,28 +802,6 @@
                                 <span class="lang-fr hidden">L'estimation précise de la force nécessite le calcul de la rigidité du piège optique. Le projet a évalué plusieurs techniques d'étalonnage passif. Les méthodes d'équipartition, de Boltzmann et de déplacement quadratique moyen se sont révélées fiables. L'analyse de la densité spectrale de puissance a surestimé la rigidité en raison du taux d'échantillonnage limité de la caméra (107,9 Hz) qui a introduit un flou de mouvement.</span>
                             </p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Media Gallery Section (Titles translated) -->
-                <div class="border-t border-gray-100 pt-8 mt-8">
-                    <h3 class="text-2xl font-bold text-slate-800 mb-6">
-                        <span class="lang-en">Project Media Gallery</span><span class="lang-fr hidden">Galerie Multimédia du Projet</span>
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">
-                                <span class="lang-en">ICSI Application</span><span class="lang-fr hidden">Application ICSI</span>
-                            </h4>
-                            <img src="assets/images/KEIO_thesis_IVF.png" alt="ICSI Procedure" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-700 mb-2">
-                                <span class="lang-en">Optical Tweezer Setup</span><span class="lang-fr hidden">Montage des Pinces Optiques</span>
-                            </h4>
-                            <img src="assets/images/KEIO_thesis_systen.png" alt="Commercial Kit" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
-                        </div>
-                        <!-- ... More images exist in original, kept structurally identical ... -->
                     </div>
                 </div>
             </div>
@@ -992,9 +971,6 @@
             </div>
         </section>
 
-        <!-- Details 4 to 8 and Repositories are similarly translated -->
-        <!-- Note: Due to prompt limits, these sections follow the exact same span structure -->
-        
         <!-- Detail: 2-DoF Gripper -->
         <section id="project-detail-4" class="section-view">
              <button onclick="showSection('projects')" class="mb-6 text-slate-500 hover:text-slate-800 font-medium flex items-center transition">
@@ -1047,7 +1023,7 @@
             </div>
         </section>
 
-        <!-- Repo Detail: ROS2 Fruit Sorting -->
+        <!-- Repo Detail: Modular ROS 2 Architecture -->
         <section id="repo-detail-1" class="section-view">
             <button onclick="showSection('repositories')" class="mb-6 text-slate-500 hover:text-slate-800 font-medium flex items-center transition">
                 <i class="fa-solid fa-arrow-left mr-2"></i> 
@@ -1061,16 +1037,18 @@
                             <span class="lang-en">Software Repository</span><span class="lang-fr hidden">Dépôt Logiciel</span>
                         </span>
                         <h1 class="text-3xl font-bold text-slate-900 mb-2">
-                            <span class="lang-en">ROS 2 Fruit Sorting Architecture</span><span class="lang-fr hidden">Architecture ROS 2 pour le Tri de Fruits</span>
+                            <span class="lang-en">Modular ROS 2 Fruit Sorting Architecture</span>
+                            <span class="lang-fr hidden">Architecture Modulaire ROS 2 pour le Tri de Fruits</span>
                         </h1>
                     </div>
-                    <a href="https://github.com/luisglez2626/ros2-fruit-sorting" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2.5 px-6 rounded-md transition shadow-md flex items-center">
+                    <a href="https://github.com/luisglez2626/fruit-sorting-gazebo-ignite" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2.5 px-6 rounded-md transition shadow-md flex items-center">
                         <i class="fa-brands fa-github mr-2"></i> 
                         <span class="lang-en">View on GitHub</span><span class="lang-fr hidden">Voir sur GitHub</span>
                     </a>
                 </div>
 
                 <div class="w-full h-64 md:h-96 bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner flex items-center justify-center">
+                    <!-- Kept same image, adjust src if you have a new one -->
                     <img src="assets/images/SimulationPickPlace.jpg" alt="Fruit Sorting Simulation" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
                 </div>
 
@@ -1079,7 +1057,7 @@
                         <h3 class="font-bold text-slate-800 uppercase tracking-wider text-sm mb-4 border-b border-slate-200 pb-2">Frameworks</h3>
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Middleware</h4>
-                            <p class="text-gray-600 text-sm">ROS 2, ament_cmake, RobotStatePublisher</p>
+                            <p class="text-gray-600 text-sm">ROS 2, ament_cmake, ament_python</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">
@@ -1089,7 +1067,10 @@
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">Environnement</h4>
-                            <p class="text-gray-600 text-sm">Gazebo 11</p>
+                            <p class="text-gray-600 text-sm">
+                                <span class="lang-en">Gazebo Harmonic (Ignition)</span>
+                                <span class="lang-fr hidden">Gazebo Harmonic (Nouveau Ignition)</span>
+                            </p>
                         </div>
                     </div>
 
@@ -1099,32 +1080,60 @@
                                 <span class="lang-en">Implementation Details</span><span class="lang-fr hidden">Détails d'Implémentation</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Development of a complete ROS 2 middleware ecosystem interfacing with Gazebo physics. The project relies on a hybrid stack utilizing C++ for high-performance kinematic solvers and Python for high-level state logic and vision pipelines.</span>
-                                <span class="lang-fr hidden">Développement d'un écosystème middleware ROS 2 complet s'interfaçant avec le moteur physique Gazebo. Le projet s'appuie sur une pile hybride utilisant C++ pour les solveurs cinématiques hautes performances et Python pour la logique d'état de haut niveau et les pipelines de vision.</span>
+                                <span class="lang-en">Development of a highly modular ROS 2 workspace, demonstrating the migration from Gazebo Classic to the modern Gazebo Harmonic (Ignition) simulator. The architecture strictly follows the principle of "separation of concerns" by decoupling the system into specific packages.</span>
+                                <span class="lang-fr hidden">Développement d'un espace de travail ROS 2 hautement modulaire, illustrant la migration de Gazebo Classic vers le simulateur moderne Gazebo Harmonic (Ignition). L'architecture suit strictement le principe de "séparation des préoccupations" en découplant le système en paquets spécifiques.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">The vision pipeline parses stereo camera data via OpenCV. Depth estimation is calculated via pixel shift disparity, translating raw visual data into 3D world coordinates through the TF2 transformation library. Corresponding end-effector targets are passed to a C++ node housing the Orocos Kinematics and Dynamics Library (KDL), where a Levenberg-Marquardt solver derives the requisite joint angles for the 6-axis mechanism.</span>
-                                <span class="lang-fr hidden">Le pipeline de vision analyse les données de la caméra stéréo via OpenCV. L'estimation de la profondeur est calculée par la disparité du décalage des pixels, traduisant les données visuelles brutes en coordonnées 3D grâce à la bibliothèque de transformation TF2. Les cibles de l'effecteur correspondantes sont transmises à un nœud C++ hébergeant la bibliothèque KDL (Kinematics and Dynamics Library) d'Orocos, où un solveur de Levenberg-Marquardt dérive les angles articulaires requis.</span>
+                                <span class="lang-en">The vision node (<code>collaborative_arm_vision</code>) processes stereo camera data using OpenCV to estimate depth and broadcast 3D TF frames. The kinematic solver (<code>collaborative_arm_kinematics</code>), written in C++ using the Orocos Kinematics and Dynamics Library (KDL), subscribes to these targets to calculate 6-DoF joint trajectories using a Levenberg-Marquardt solver.</span>
+                                <span class="lang-fr hidden">Le nœud de vision (<code>collaborative_arm_vision</code>) traite les données de la caméra stéréo via OpenCV pour estimer la profondeur et diffuser les repères TF 3D. Le solveur cinématique (<code>collaborative_arm_kinematics</code>), écrit en C++ avec la bibliothèque Orocos KDL, souscrit à ces cibles pour calculer les trajectoires articulaires à 6 DDL à l'aide d'un solveur de Levenberg-Marquardt.</span>
                             </p>
                         </div>
 
                         <div class="border-t border-gray-100 pt-6">
                             <h3 class="text-lg font-bold text-slate-800 mb-4">
-                                <span class="lang-en">Node Architecture</span><span class="lang-fr hidden">Architecture des Nœuds</span>
+                                <span class="lang-en">Package Architecture</span><span class="lang-fr hidden">Architecture des Paquets</span>
                             </h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div class="bg-white p-3 rounded border border-slate-200">
-                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">ik_solver_node.cpp</p>
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_description</p>
                                     <p class="text-gray-600 text-xs">
-                                        <span class="lang-en">C++ IK solver processing TF targets into joint commands.</span>
-                                        <span class="lang-fr hidden">Solveur cinématique inverse C++ transformant les cibles TF en commandes articulaires.</span>
+                                        <span class="lang-en">URDF/Xacro models and mechanical meshes.</span>
+                                        <span class="lang-fr hidden">Modèles URDF/Xacro et maillages mécaniques.</span>
                                     </p>
                                 </div>
                                 <div class="bg-white p-3 rounded border border-slate-200">
-                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">vision_detector.py</p>
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_gazebo</p>
                                     <p class="text-gray-600 text-xs">
-                                        <span class="lang-en">HSV masking and stereo depth pipeline.</span>
-                                        <span class="lang-fr hidden">Masquage HSV et pipeline de profondeur stéréo.</span>
+                                        <span class="lang-en">Simulation worlds and modern Gazebo plugins.</span>
+                                        <span class="lang-fr hidden">Mondes de simulation et plugins pour le nouveau Gazebo.</span>
+                                    </p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_kinematics</p>
+                                    <p class="text-gray-600 text-xs">
+                                        <span class="lang-en">C++ Inverse Kinematics solver using Orocos KDL.</span>
+                                        <span class="lang-fr hidden">Solveur de cinématique inverse en C++ avec Orocos KDL.</span>
+                                    </p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_vision</p>
+                                    <p class="text-gray-600 text-xs">
+                                        <span class="lang-en">Python OpenCV stereo vision and TF broadcast.</span>
+                                        <span class="lang-fr hidden">Pipeline de vision stéréo Python/OpenCV et diffusion TF.</span>
+                                    </p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_application</p>
+                                    <p class="text-gray-600 text-xs">
+                                        <span class="lang-en">High-level Python state logic for the pick-and-place task.</span>
+                                        <span class="lang-fr hidden">Logique d'état de haut niveau en Python pour la tâche de prise et dépose.</span>
+                                    </p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-slate-200">
+                                    <p class="font-bold text-slate-800 text-xs mb-1 font-mono">collaborative_arm_bringup</p>
+                                    <p class="text-gray-600 text-xs">
+                                        <span class="lang-en">Orchestration logic and global launch files.</span>
+                                        <span class="lang-fr hidden">Logique d'orchestration et fichiers de lancement (launch) globaux.</span>
                                     </p>
                                 </div>
                             </div>
