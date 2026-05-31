@@ -686,8 +686,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <!-- Repo 1: ROS 2 Modular Architecture -->
                 <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 cursor-pointer hover:shadow-lg transition group" onclick="showSection('repo-detail-1')">
-                    <div class="h-48 bg-slate-100 w-full flex items-center justify-center overflow-hidden">
-                        <img src="assets/images/SimulationPickPlace_thumbnail.jpg" alt="Modular ROS 2 Architecture" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
+                    <div class="h-72 md:h-80 bg-slate-100 w-full flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/SimulationPickPlace_thumbnail.jpg" alt="Modular ROS 2 Architecture" class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x300/f1f5f9/94a3b8?text=Image+Pending'">
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <div class="text-xs text-blue-600 font-bold tracking-wider uppercase mb-2">ROS 2 • Modern Gazebo • Modular</div>
@@ -1047,9 +1047,9 @@
                     </a>
                 </div>
 
-                <div class="w-full h-64 md:h-96 bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner flex items-center justify-center">
-                    <!-- Kept same image, adjust src if you have a new one -->
-                    <img src="assets/images/SimulationPickPlace.jpg" alt="Fruit Sorting Simulation" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/1200x600/f1f5f9/94a3b8?text=Image+Pending'">
+                <div class="w-full bg-slate-50 rounded-lg overflow-hidden mb-8 border border-slate-200 shadow-inner">
+                    <!-- Image now scales fully to width -->
+                    <img src="assets/images/SimulationPickPlace.jpg" alt="Fruit Sorting Simulation" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x800/f1f5f9/94a3b8?text=Image+Pending'">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1080,12 +1080,20 @@
                                 <span class="lang-en">Implementation Details</span><span class="lang-fr hidden">Détails d'Implémentation</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Development of a highly modular ROS 2 workspace, demonstrating the migration from Gazebo Classic to the modern Gazebo Harmonic (Ignition) simulator. The architecture strictly follows the principle of "separation of concerns" by decoupling the system into specific packages.</span>
-                                <span class="lang-fr hidden">Développement d'un espace de travail ROS 2 hautement modulaire, illustrant la migration de Gazebo Classic vers le simulateur moderne Gazebo Harmonic (Ignition). L'architecture suit strictement le principe de "séparation des préoccupations" en découplant le système en paquets spécifiques.</span>
+                                <span class="lang-en">This project represents a highly modular ROS 2 workspace designed for scalability, showcasing a complete migration to the modern Gazebo Harmonic (Ignition) simulation environment. The architecture strictly adheres to the principle of "separation of concerns," decoupling the kinematic logic, vision pipelines, hardware descriptions, and high-level applications into dedicated packages.</span>
+                                <span class="lang-fr hidden">Ce projet représente un espace de travail ROS 2 hautement modulaire conçu pour être évolutif, illustrant une migration complète vers l'environnement de simulation moderne Gazebo Harmonic (Ignition). L'architecture respecte strictement le principe de "séparation des préoccupations", en découplant la logique cinématique, les pipelines de vision, les descriptions matérielles et les applications de haut niveau dans des paquets dédiés.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">The vision node (<code>collaborative_arm_vision</code>) processes stereo camera data using OpenCV to estimate depth and broadcast 3D TF frames. The kinematic solver (<code>collaborative_arm_kinematics</code>), written in C++ using the Orocos Kinematics and Dynamics Library (KDL), subscribes to these targets to calculate 6-DoF joint trajectories using a Levenberg-Marquardt solver.</span>
-                                <span class="lang-fr hidden">Le nœud de vision (<code>collaborative_arm_vision</code>) traite les données de la caméra stéréo via OpenCV pour estimer la profondeur et diffuser les repères TF 3D. Le solveur cinématique (<code>collaborative_arm_kinematics</code>), écrit en C++ avec la bibliothèque Orocos KDL, souscrit à ces cibles pour calculer les trajectoires articulaires à 6 DDL à l'aide d'un solveur de Levenberg-Marquardt.</span>
+                                <span class="lang-en">The core logic is driven by a comprehensive state machine (developed in Python) that acts as the orchestrator. It manages the full pick-and-place lifecycle: returning the arm to home, activating the vision system, commanding trajectory paths, toggling the vacuum gripper, and depositing the sorted items. A custom-built <strong>Tkinter Graphical Interface</strong> runs concurrently, providing operators with a live dashboard. This UI displays real-time 6-axis joint states, live task progress, system alerts, and offers manual override controls over the state machine.</span>
+                                <span class="lang-fr hidden">La logique centrale est pilotée par une machine à états complète (développée en Python) qui agit comme orchestrateur. Elle gère l'ensemble du cycle de prise et dépose : retour du bras à la position d'origine, activation du système de vision, commande des trajectoires, basculement du préhenseur à vide et dépôt des articles triés. Une <strong>Interface Graphique Tkinter</strong> sur mesure s'exécute simultanément, fournissant aux opérateurs un tableau de bord en direct. Cette interface affiche les états des 6 articulations en temps réel, la progression des tâches, les alertes du système, et offre des commandes d'annulation manuelle sur la machine à états.</span>
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                <span class="lang-en">For environmental perception, the vision node (<code>collaborative_arm_vision</code>) processes incoming stereo camera data. Using OpenCV, it isolates target geometries via HSV filtering, estimates physical depth using pixel disparity, and broadcasts these coordinates as dynamic 3D TF frames.</span>
+                                <span class="lang-fr hidden">Pour la perception de l'environnement, le nœud de vision (<code>collaborative_arm_vision</code>) traite les données entrantes de la caméra stéréo. En utilisant OpenCV, il isole les géométries cibles via un filtrage HSV, estime la profondeur physique en utilisant la disparité des pixels, et diffuse ces coordonnées sous forme de repères TF 3D dynamiques.</span>
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <span class="lang-en">The kinematic solver (<code>collaborative_arm_kinematics</code>) serves as the bridge between perception and motion. Written in highly optimized C++ utilizing the Orocos Kinematics and Dynamics Library (KDL), it automatically parses the robot's URDF to build the kinematic tree. It listens for the TF frames published by the vision node and employs a Levenberg-Marquardt non-linear solver to calculate the exact inverse kinematics. It then packages these solutions into <code>JointTrajectory</code> messages for the Gazebo controllers to execute smoothly.</span>
+                                <span class="lang-fr hidden">Le solveur cinématique (<code>collaborative_arm_kinematics</code>) sert de pont entre la perception et le mouvement. Écrit en C++ hautement optimisé à l'aide de la bibliothèque Orocos KDL, il analyse automatiquement l'URDF du robot pour construire l'arbre cinématique. Il écoute les repères TF publiés par le nœud de vision et emploie un solveur non linéaire de Levenberg-Marquardt pour calculer la cinématique inverse exacte. Il emballe ensuite ces solutions dans des messages <code>JointTrajectory</code> pour que les contrôleurs Gazebo les exécutent de manière fluide.</span>
                             </p>
                         </div>
 
@@ -1137,6 +1145,30 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Media Gallery added here -->
+                <div class="border-t border-gray-100 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">
+                        <span class="lang-en">Simulation Media Gallery</span>
+                        <span class="lang-fr hidden">Galerie Multimédia de la Simulation</span>
+                    </h3>
+                    <div class="grid grid-cols-1 gap-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
+                                <span class="lang-en">Fruit Sorting Demo Video</span>
+                                <span class="lang-fr hidden">Vidéo de Démonstration : Tri de Fruits</span>
+                            </h4>
+                            <div class="w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+                                <!-- PLEASE UPDATE 'YOUR_VIDEO_ID' below with your actual youtube ID -->
+                                <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Fruit Sorting Simulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Video demonstration of the modular ROS 2 architecture executing an autonomous pick-and-place routine, highlighting the interaction between the Tkinter control interface, OpenCV vision node, and the Gazebo Harmonic physics engine.</span>
+                                <span class="lang-fr hidden">Démonstration vidéo de l'architecture modulaire ROS 2 exécutant une routine autonome de prise et dépose, soulignant l'interaction entre l'interface de contrôle Tkinter, le nœud de vision OpenCV et le moteur physique Gazebo Harmonic.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
