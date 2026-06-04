@@ -1047,30 +1047,30 @@
                                 <span class="lang-en">System Objective</span><span class="lang-fr hidden">Objectif du Système</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Simulation development for the hand guidance of a macro-micro redundant robotic system. The initiative aims to assist in percutaneous medical interventions, where enhanced medical gestures lead to improved patient care, reduced intervention costs, and optimized ergonomic conditions for surgeons.</span>
-                                <span class="lang-fr hidden">Développement d'une simulation pour le guidage manuel d'un système robotique redondant macro-micro. L'initiative vise à assister les interventions médicales percutanées, où l'amélioration des gestes médicaux conduit à de meilleurs soins aux patients, à une réduction des coûts d'intervention et à des conditions ergonomiques optimisées pour les chirurgiens.</span>
+                                <span class="lang-en">A simulation was developed for the hand guidance of a macro-micro redundant robotic system. The goal of this project was to assist in percutaneous medical interventions. Improving medical gestures leads to better patient care, reduces intervention costs, and improves the overall working conditions for surgeons.</span>
+                                <span class="lang-fr hidden">Le développement d'une simulation pour le guidage manuel d'un système robotique redondant macro-micro. Le but de ce projet était d'aider aux interventions médicales percutanées. L'amélioration des gestes médicaux permet d'améliorer les soins aux patients, de réduire les coûts d'intervention et d'améliorer les conditions de travail globales des chirurgiens.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">The complete architecture was modeled using MATLAB and Simulink, pairing a heavy 7-DoF KUKA robot (acting as the macro system) with a smaller 3-DoF robotic mechanism (the micro system).</span>
-                                <span class="lang-fr hidden">L'architecture complète a été modélisée à l'aide de MATLAB et Simulink, en associant un lourd robot KUKA à 7 DDL (agissant comme système macro) avec un mécanisme robotique plus petit à 3 DDL (le système micro).</span>
+                                <span class="lang-en">The entire system was built as a simulation using MATLAB and Simulink. The setup consisted of a large 7 DoF KUKA robot acting as the macro system and a small 3 DoF robot acting as the micro system.</span>
+                                <span class="lang-fr hidden">L'ensemble du système a été construit sous forme de simulation à l'aide de MATLAB et Simulink. La configuration se composait d'un grand robot KUKA à 7 DDL agissant comme système macro et d'un petit robot à 3 DDL agissant comme système micro.</span>
                             </p>
                         </div>
 
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Control & Kinematics Strategy</span><span class="lang-fr hidden">Stratégie de Commande et Cinématique</span>
+                                <span class="lang-en">Robotics Fundamentals & Control</span><span class="lang-fr hidden">Fondamentaux de Robotique et de Contrôle</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Robot configurations were initially defined utilizing Denavit-Hartenberg parameters to compute forward kinematics and Jacobian matrices. The manipulability index—a critical safety metric indicating proximity to mechanical singularities—was continuously derived from these matrices to ensure secure operations.</span>
-                                <span class="lang-fr hidden">Les configurations des robots ont été initialement définies à l'aide des paramètres de Denavit-Hartenberg pour calculer la cinématique directe (MGD) et les matrices Jacobiennes. L'indice de manipulabilité – une métrique de sécurité critique indiquant la proximité des singularités mécaniques – a été continuellement dérivé de ces matrices.</span>
+                                <span class="lang-en">First, the configuration of both robots was defined using Denavit-Hartenberg parameters to calculate their forward kinematics and Jacobian matrices. The Jacobian is essentially the mathematical bridge between the joint velocities and the tool's velocity. From this Jacobian, the manipulability index was calculated. This index is a critical safety and performance metric because it tells the system how close the robot is to a singularity, a dangerous position where the arm gets mathematically stuck.</span>
+                                <span class="lang-fr hidden">Tout d'abord, la configuration des deux robots a été définie à l'aide des paramètres de Denavit-Hartenberg pour calculer leur cinématique directe et leurs matrices jacobiennes. Le Jacobien est essentiellement le pont mathématique entre les vitesses articulaires et la vitesse de l'outil. À partir de ce Jacobien, l'indice de manipulabilité a été calculé. Cet indice est une mesure critique de sécurité et de performance car il indique au système à quel point le robot est proche d'une singularité, une position dangereuse où le bras se bloque mathématiquement.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">A core operational requirement mandated position control with a fixed orientation for the macro arm, while the micro robot operated exclusively via torque control. A computed torque controller featuring an impedance control law was engineered for the surgical tool. This configuration allows the mechanism to function as a virtual spring and damper, yielding safely to applied surgical forces and rendering the heavy macro robot virtually weightless during manual hand guidance.</span>
-                                <span class="lang-fr hidden">Une exigence opérationnelle fondamentale imposait une commande en position avec une orientation fixe pour le bras macro, tandis que le micro-robot fonctionnait exclusivement par commande en couple. Un contrôleur à couple calculé intégrant une loi de commande en impédance a été conçu pour l'outil chirurgical. Cette configuration permet au mécanisme de fonctionner comme un ressort et un amortisseur virtuels, rendant le lourd robot macro virtuellement en apesanteur pendant le guidage manuel.</span>
+                                <span class="lang-en">A core requirement was that the main KUKA arm had to be controlled by position while maintaining a fixed orientation, whereas the smaller micro robot was controlled purely by torque. A computed torque controller with an impedance control law was designed. This is extremely important for medical applications. Instead of forcing the robot to move rigidly to a point, the impedance control makes the tool act like a virtual spring and damper. This allows the system to yield softly when the surgeon applies physical force, making the heavy robot feel weightless and safe to guide by hand.</span>
+                                <span class="lang-fr hidden">Une exigence fondamentale était que le bras principal KUKA devait être contrôlé en position tout en maintenant une orientation fixe, tandis que le plus petit micro-robot était contrôlé uniquement par couple. Un contrôleur de couple calculé avec une loi de commande en impédance a été conçu. Ceci est extrêmement important pour les applications médicales. Au lieu de forcer le robot à se déplacer rigidement vers un point, la commande en impédance permet à l'outil d'agir comme un ressort et un amortisseur virtuels. Cela permet au système de céder en douceur lorsque le chirurgien applique une force physique, donnant l'impression que le lourd robot est en apesanteur et sûr à guider à la main.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">To unify both machines, a dynamic task distribution algorithm was implemented. By monitoring the micro-robot's physical extension (distance AB) and current manipulability index, the algorithm evaluates and dictates in real-time whether the macro arm should assist movement or if the micro tool possesses sufficient workspace to operate independently.</span>
-                                <span class="lang-fr hidden">Pour unifier les deux machines, un algorithme de distribution dynamique des tâches a été mis en œuvre. En surveillant l'extension physique du micro-robot (distance AB) et l'indice de manipulabilité actuel, l'algorithme évalue et dicte en temps réel si le bras macro doit assister le mouvement ou si le micro-outil dispose d'un espace de travail suffisant pour fonctionner de manière indépendante.</span>
+                                <span class="lang-en">To make both robots work as a single unified system, a task distribution algorithm was developed. This logic continuously monitors the distance between the micro robot's base and its tip, known as length AB, along with the manipulability index. Based on these values, the algorithm dynamically adjusts the adaptive gain, deciding in real-time whether the large KUKA arm needs to move to assist the small tool or if the small tool has enough workspace to move alone.</span>
+                                <span class="lang-fr hidden">Pour que les deux robots fonctionnent comme un seul système unifié, un algorithme de distribution des tâches a été développé. Cette logique surveille en permanence la distance entre la base du micro-robot et son extrémité, appelée longueur AB, ainsi que l'indice de manipulabilité. Sur la base de ces valeurs, l'algorithme ajuste dynamiquement le gain adaptatif, décidant en temps réel si le grand bras KUKA doit se déplacer pour assister le petit outil ou si le petit outil dispose d'un espace de travail suffisant pour se déplacer seul.</span>
                             </p>
                         </div>
                     </div>
@@ -1080,6 +1080,88 @@
                 <div class="w-full mb-10 rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                     <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/05S68OqM6BU" title="Simulation Output Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+
+                <!-- Media Gallery Section -->
+                <div class="border-t border-gray-100 pt-8 mt-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">
+                        <span class="lang-en">Project Media Gallery</span><span class="lang-fr hidden">Galerie Multimédia du Projet</span>
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Thumbnail" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Project Concept Thumbnail</span><span class="lang-fr hidden">Aperçu du Concept</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Macro-Micro Architecture</span><span class="lang-fr hidden">Architecture Macro-Micro</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Scheme" class="w-full h-48 object-contain bg-slate-100" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">General Control Scheme</span><span class="lang-fr hidden">Schéma Général de Contrôle</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control" class="w-full h-48 object-contain bg-slate-100" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Computed Torque Control</span><span class="lang-fr hidden">Commande en Couple Calculé</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_lengthAB.png" alt="Length AB Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Micro Robot Extension (Length AB)</span><span class="lang-fr hidden">Extension du Micro-Robot (AB)</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_graph_gain.png" alt="Gain Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Adaptive Gain Distribution</span><span class="lang-fr hidden">Distribution Adaptative du Gain</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Cartesian Coordinates Tracking</span><span class="lang-fr hidden">Suivi des Coordonnées Cartésiennes</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Trajectory Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">3D Output Trajectory</span><span class="lang-fr hidden">Trajectoire de Sortie 3D</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_annex_17.png" alt="Annex 17" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">MATLAB Simulation Annex A</span><span class="lang-fr hidden">Annexe de Simulation A</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_annex_19.png" alt="Annex 19" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">MATLAB Simulation Annex B</span><span class="lang-fr hidden">Annexe de Simulation B</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_annex_20.png" alt="Annex 20" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Simulink Logic Blocks</span><span class="lang-fr hidden">Blocs Logiques Simulink</span>
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                            <img src="assets/images/ECN_research_annex_21.png" alt="Annex 21" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                                <span class="lang-en">Kinematic Solver Block</span><span class="lang-fr hidden">Bloc du Solveur Cinématique</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -1138,8 +1220,8 @@
                                 <span class="lang-en">Project Objective</span><span class="lang-fr hidden">Objectif du Projet</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">Developed as a capstone project to obtain a minor specialty in Cyberphysical Systems. The objective involved architecting a fully automated production line for custom keychain assembly, integrating multiple industrial machines into a unified ecosystem in collaboration with industry partners.</span>
-                                <span class="lang-fr hidden">Développé en tant que projet de fin d'études pour obtenir une spécialité mineure en Systèmes Cyber-physiques. L'objectif consistait à concevoir une ligne de production entièrement automatisée pour l'assemblage de porte-clés personnalisés, en intégrant plusieurs machines industrielles dans un écosystème unifié en collaboration avec des partenaires de l'industrie.</span>
+                                <span class="lang-en">Developed as a capstone project to obtain a minor specialty in Cyberphysical Systems. The objective involved architecting a fully automated production line for custom keychain assembly, integrating multiple industrial machines into a unified ecosystem in collaboration with industry partners like Siemens.</span>
+                                <span class="lang-fr hidden">Développé en tant que projet de fin d'études pour obtenir une spécialité mineure en Systèmes Cyber-physiques. L'objectif consistait à concevoir une ligne de production entièrement automatisée pour l'assemblage de porte-clés personnalisés, en intégrant plusieurs machines industrielles dans un écosystème unifié en collaboration avec des partenaires industriels tels que Siemens.</span>
                             </p>
                         </div>
                         
@@ -1156,12 +1238,12 @@
                                 <span class="lang-fr hidden">La manipulation de précision a été réalisée grâce à des supports de caméra conçus sur mesure et des fixations de maintien modélisées en CAO. Les pipelines de vision par ordinateur utilisant OpenCV détectent la position et l'orientation des pièces, transmettant des coordonnées précises aux préhenseurs robotiques.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">System-wide synchronization relied on Modbus TCP/IP protocols interfaced with Siemens PLCs. Custom Python scripts managed hardware states, while ROS navigation stacks and actionlib frameworks coordinated mobile base routing utilizing laser scans and occupancy mapping within RViz. Factory flow logic and collision avoidance parameters were rigorously validated prior to physical deployment using Tecnomatix Plant Simulation and ABB RobotStudio.</span>
-                                <span class="lang-fr hidden">La synchronisation à l'échelle du système reposait sur les protocoles Modbus TCP/IP interfacés avec les API Siemens. Des scripts Python sur mesure géraient les états matériels, tandis que les piles de navigation ROS et les frameworks actionlib coordonnaient l'acheminement des bases mobiles à l'aide de scans laser et de cartographie d'occupation dans RViz. La logique de flux de l'usine et les paramètres d'évitement des collisions ont été rigoureusement validés avant le déploiement physique à l'aide de Tecnomatix Plant Simulation et d'ABB RobotStudio.</span>
+                                <span class="lang-en">System-wide synchronization relied on Modbus TCP/IP protocols interfaced with Siemens PLCs. By reading specific holding registers and coils, Python scripts synchronized the hardware across the entire cell. ROS and the actionlib library were used to send navigation goals to the mobile bases, while visualizing sensor data like laser scans and occupancy maps in RViz. Factory flow logic and collision avoidance parameters were rigorously validated prior to physical deployment using Tecnomatix Plant Simulation and ABB RobotStudio.</span>
+                                <span class="lang-fr hidden">La synchronisation à l'échelle du système reposait sur les protocoles Modbus TCP/IP interfacés avec les API Siemens. En lisant des registres de maintien et des bobines spécifiques (holding registers and coils), des scripts Python ont synchronisé le matériel sur l'ensemble de la cellule. ROS et la bibliothèque actionlib ont été utilisés pour envoyer des objectifs de navigation aux bases mobiles, tout en visualisant les données des capteurs (cartes d'occupation, scans laser) dans RViz. La logique de flux de l'usine et les paramètres d'évitement des collisions ont été rigoureusement validés avant le déploiement physique à l'aide de Tecnomatix Plant Simulation et d'ABB RobotStudio.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">Finally, a centralized Tkinter user interface, governed by robust state machine logic, was deployed to oversee the operation. This interface granted operators oversight of pick-and-place routines and battery management, ensuring compliance with ANSI and RIA industrial safety standards.</span>
-                                <span class="lang-fr hidden">Enfin, une interface utilisateur centralisée Tkinter, régie par une logique de machine à états robuste, a été déployée pour superviser l'opération. Cette interface accordait aux opérateurs la supervision des routines de prise et dépose et de la gestion des batteries, garantissant la conformité aux normes de sécurité industrielles ANSI et RIA.</span>
+                                <span class="lang-en">Finally, a centralized Tkinter user interface, governed by robust state machine logic, was deployed to oversee the operation. This interface granted operators oversight of pick-and-place routines and battery management. Throughout the process, ANSI and RIA safety standards were applied to ensure the physical cell was safe for human operators, successfully overcoming hardware challenges such as controller failures and mechanical stresses on custom grippers.</span>
+                                <span class="lang-fr hidden">Enfin, une interface utilisateur centralisée Tkinter, régie par une logique de machine à états robuste, a été déployée pour superviser l'opération. Cette interface accordait aux opérateurs la supervision des routines de prise et dépose et de la gestion des batteries. Tout au long du processus, les normes de sécurité ANSI et RIA ont été appliquées pour garantir que la cellule physique était sûre pour les opérateurs humains, surmontant avec succès les défis matériels tels que les pannes de contrôleur et les contraintes mécaniques sur les préhenseurs personnalisés.</span>
                             </p>
                         </div>
                     </div>
@@ -1424,7 +1506,7 @@
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">
                                 <span class="lang-en">Hardware</span><span class="lang-fr hidden">Matériel</span>
                             </h4>
-                            <p class="text-gray-600 text-sm">PowerFlex 4 Drive, 3-Phase AC Motor, Arduino, Gyroscope, Nema 34 Steppers</p>
+                            <p class="text-gray-600 text-sm">PowerFlex 4 Drive, 3-Phase AC Motor, Arduino, Gyroscope, Accelerometer, Ultrasonic & Piezoelectric Sensors, Geckodrive G202, Nema 34 Stepper Motors</p>
                         </div>
                     </div>
                     
@@ -1481,6 +1563,16 @@
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">
+                                <span class="lang-en">Full System - Isometric View</span><span class="lang-fr hidden">Système Complet - Vue Isométrique</span>
+                            </h4>
+                            <img src="assets/images/TEC_blocks_system_iso.png" alt="System Isometric View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Isometric view of the entire assembled automated robotic block layer.</span>
+                                <span class="lang-fr hidden">Vue isométrique de l'ensemble du système automatisé de pose de blocs.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Full System - Alternate Isometric</span><span class="lang-fr hidden">Système Complet - Isométrie Alternative</span>
                             </h4>
                             <img src="assets/images/TEC_blocks_system_iso2.png" alt="System Isometric View 2" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
@@ -1501,15 +1593,22 @@
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">
-                                <span class="lang-en">Gripper Module - Front & Lateral</span><span class="lang-fr hidden">Module Préhenseur - Face & Latéral</span>
+                                <span class="lang-en">Gripper Module - Front View</span><span class="lang-fr hidden">Module Préhenseur - Vue de Face</span>
                             </h4>
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="assets/images/TEC_blocks_gripper_front.png" alt="Gripper Front View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                                <img src="assets/images/TEC_blocks_gripper_lateral.png" alt="Gripper Lateral View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            </div>
+                            <img src="assets/images/TEC_blocks_gripper_front.png" alt="Gripper Front View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
                             <p class="text-sm text-gray-500 italic mt-2">
-                                <span class="lang-en">Orthogonal views for manufacturing dimensions of the gripper module.</span>
-                                <span class="lang-fr hidden">Vues orthogonales pour les dimensions de fabrication du module préhenseur.</span>
+                                <span class="lang-en">Front orthogonal view highlighting the actuator paths.</span>
+                                <span class="lang-fr hidden">Vue orthogonale de face mettant en évidence les trajectoires des actionneurs.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
+                                <span class="lang-en">Gripper Module - Lateral View</span><span class="lang-fr hidden">Module Préhenseur - Vue Latérale</span>
+                            </h4>
+                            <img src="assets/images/TEC_blocks_gripper_lateral.png" alt="Gripper Lateral View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Lateral orthogonal view for manufacturing dimensions.</span>
+                                <span class="lang-fr hidden">Vue orthogonale latérale pour les dimensions de fabrication.</span>
                             </p>
                         </div>
                         <div>
@@ -1524,15 +1623,22 @@
                         </div>
                         <div>
                             <h4 class="text-lg font-bold text-slate-700 mb-2">
-                                <span class="lang-en">Rotational Base - Lateral & Isometric</span><span class="lang-fr hidden">Base Rotative - Latéral & Isométrique</span>
+                                <span class="lang-en">Rotational Base - Lateral View</span><span class="lang-fr hidden">Base Rotative - Vue Latérale</span>
                             </h4>
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="assets/images/TEC_blocks_rot_lateral.png" alt="Rotational Lateral View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                                <img src="assets/images/TEC_blocks_rot_iso.png" alt="Rotational Isometric View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            </div>
+                            <img src="assets/images/TEC_blocks_rot_lateral.png" alt="Rotational Lateral View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
                             <p class="text-sm text-gray-500 italic mt-2">
-                                <span class="lang-en">Views demonstrating the bearing placements and gear ratios.</span>
-                                <span class="lang-fr hidden">Vues démontrant les placements des roulements et les rapports d'engrenage.</span>
+                                <span class="lang-en">Lateral cutaway view showing internal bearing placement.</span>
+                                <span class="lang-fr hidden">Vue latérale en coupe montrant le placement des roulements internes.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
+                                <span class="lang-en">Rotational Base - Isometric View</span><span class="lang-fr hidden">Base Rotative - Vue Isométrique</span>
+                            </h4>
+                            <img src="assets/images/TEC_blocks_rot_iso.png" alt="Rotational Isometric View" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Isometric view demonstrating the full gear and housing assembly.</span>
+                                <span class="lang-fr hidden">Vue isométrique démontrant l'assemblage complet des engrenages et du boîtier.</span>
                             </p>
                         </div>
                     </div>
@@ -1658,13 +1764,13 @@
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">
                                 <span class="lang-en">Software Stack</span><span class="lang-fr hidden">Suite Logicielle</span>
                             </h4>
-                            <p class="text-gray-600 text-sm">C++, ROS, ViSP Framework</p>
+                            <p class="text-gray-600 text-sm">C++, ROS, ViSP (Visual Servoing Platform)</p>
                         </div>
                         <div class="mb-4">
                             <h4 class="font-semibold text-slate-700 text-xs uppercase mb-1">
                                 <span class="lang-en">Simulated Hardware</span><span class="lang-fr hidden">Matériel Simulé</span>
                             </h4>
-                            <p class="text-gray-600 text-sm">RRP Turret, KUKA KR16, UR10</p>
+                            <p class="text-gray-600 text-sm">RRP Turret Robot, KUKA KR16 (Spherical wrist), Universal Robot UR10 (Non-spherical wrist)</p>
                         </div>
                     </div>
 
@@ -1769,8 +1875,8 @@
                                 <span class="lang-fr hidden">Le fonctionnement de la cellule dicte la synchronisation de deux bras industriels distincts. Un ABB IRB 4600 fonctionne comme effecteur principal, manœuvrant l'outil laser le long de trajectoires de soudure calculées. Un ABB IRB 1410 auxiliaire est déployé pour la manipulation précise des pièces, localisant et sécurisant le composant secondaire sur la plaque de base avant l'exécution de la soudure. La stabilisation de la plaque de base est garantie par des fixations à pinces pneumatiques sur mesure modélisées dans SolidWorks.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Virtual commissioning was executed entirely inside ABB RobotStudio. This environment facilitated offline trajectory programming, collision detection, and parameter configuration for the integrated Cognex visual inspection nodes.</span>
-                                <span class="lang-fr hidden">La mise en service virtuelle a été exécutée entièrement dans ABB RobotStudio. Cet environnement a facilité la programmation hors ligne des trajectoires, la détection des collisions et la configuration des paramètres pour les nœuds d'inspection visuelle Cognex intégrés.</span>
+                                <span class="lang-en">Virtual commissioning was executed entirely inside ABB RobotStudio. This environment facilitated offline trajectory programming, collision detection, and parameter configuration for the integrated Cognex visual inspection nodes. SolidWorks was employed for the precise mechanical design of all custom components within the cell, including the design of the pneumatic work-holding fixtures, safety fencing, and the specific connection flanges required to mount the welding tool to the robot's Tool Center Point.</span>
+                                <span class="lang-fr hidden">La mise en service virtuelle a été exécutée entièrement dans ABB RobotStudio. Cet environnement a facilité la programmation hors ligne des trajectoires, la détection des collisions et la configuration des paramètres pour les nœuds d'inspection visuelle Cognex intégrés. SolidWorks a été utilisé pour la conception mécanique précise de tous les composants personnalisés de la cellule, y compris la conception des fixations pneumatiques de maintien des pièces, des clôtures de sécurité et des brides de connexion spécifiques requises pour monter l'outil de soudage sur le point central de l'outil (TCP) du robot.</span>
                             </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
                                 <span class="lang-en">The architectural layout inherently adheres to ISO safety protocols, featuring automated conveyor interlocks, physical perimeter barriers, and safety laser scanners to ensure an uncompromised operational envelope.</span>
