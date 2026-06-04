@@ -72,9 +72,9 @@
                     <button onclick="showSection('repositories')" class="hover:text-blue-400 transition font-medium text-sm">
                         <span class="lang-en">My Code</span><span class="lang-fr hidden">Mes Codes</span>
                     </button>
-                    <a href="assets/docs/CV_LuisGonzalez.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-1.5 px-4 rounded-md transition shadow-sm text-sm flex items-center ml-2">
+                    <a href="assets/docs/CV_LuisGonzalez_En.pdf" target="_blank" class="cv-download-link bg-blue-600 hover:bg-blue-500 text-white font-semibold py-1.5 px-4 rounded-md transition shadow-sm text-sm flex items-center ml-2">
                         <i class="fa-solid fa-file-pdf mr-2"></i> 
-                        <span class="lang-en">Resume</span><span class="lang-fr hidden">CV</span>
+                        <span class="lang-en">CV</span><span class="lang-fr hidden">CV</span>
                     </a>
                     
                     <!-- Language Switcher Desktop -->
@@ -112,7 +112,7 @@
             <button onclick="showSection('repositories')" class="block w-full text-left px-4 py-3 border-b border-slate-700 hover:bg-slate-700">
                 <span class="lang-en">My Code</span><span class="lang-fr hidden">Mes Codes</span>
             </button>
-            <a href="assets/docs/CV_LuisGonzalez.pdf" target="_blank" class="block w-full text-left px-4 py-3 text-blue-400 font-semibold hover:bg-slate-700">
+            <a href="assets/docs/CV_LuisGonzalez_En.pdf" target="_blank" class="cv-download-link block w-full text-left px-4 py-3 text-blue-400 font-semibold hover:bg-slate-700">
                 <i class="fa-solid fa-file-pdf mr-2"></i> <span class="lang-en">Open CV</span><span class="lang-fr hidden">Ouvrir le CV</span>
             </a>
         </div>
@@ -211,7 +211,7 @@
 
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                            <a href="assets/docs/CV_LuisGonzalez.pdf" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-6 rounded-lg transition shadow-md flex items-center">
+                            <a href="assets/docs/CV_LuisGonzalez_En.pdf" target="_blank" class="cv-download-link bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-6 rounded-lg transition shadow-md flex items-center">
                                 <i class="fa-solid fa-download mr-2"></i> 
                                 <span class="lang-en">Download CV</span><span class="lang-fr hidden">Télécharger le CV</span>
                             </a>
@@ -496,7 +496,7 @@
                     <a href="assets/docs/Attestation_reussite_ECN.pdf" target="_blank" class="bg-slate-50 rounded-lg border border-gray-200 overflow-hidden hover:shadow-md hover:border-blue-400 transition group block text-center p-4">
                         <i class="fa-solid fa-file-pdf text-4xl text-red-500 mb-3 group-hover:scale-110 transition-transform"></i>
                         <h4 class="font-bold text-slate-800 text-xs mb-1 group-hover:text-blue-600 transition">
-                            <span class="lang-en">M.Sc. Robotics</span><span class="lang-fr hidden">Robotique (M.Sc.)</span>
+                            <span class="lang-en">Master Technologies</span><span class="lang-fr hidden">Master Technologies</span>
                         </h4>
                         <p class="text-[10px] text-gray-500 uppercase tracking-wide">Ecole Centrale</p>
                     </a>
@@ -1086,79 +1086,140 @@
                     <h3 class="text-2xl font-bold text-slate-800 mb-6">
                         <span class="lang-en">Project Media Gallery</span><span class="lang-fr hidden">Galerie Multimédia du Projet</span>
                     </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Thumbnail" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Project Concept Thumbnail</span><span class="lang-fr hidden">Aperçu du Concept</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_cobotic_thumbnail.png" alt="Thumbnail" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A visual overview of the cobotic project, illustrating the core concept of the macro-micro robotic manipulation system.</span>
+                                <span class="lang-fr hidden">Un aperçu visuel du projet cobotique, illustrant le concept fondamental du système de manipulation robotique macro-micro.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Macro-Micro Architecture</span><span class="lang-fr hidden">Architecture Macro-Micro</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_macro_micro_robot.png" alt="Macro Micro Robot" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A diagram presenting the macro-micro architecture, combining a large workspace manipulator with a highly precise micro-mechanism.</span>
+                                <span class="lang-fr hidden">Un diagramme présentant l'architecture macro-micro, combinant un manipulateur à grand espace de travail avec un micro-mécanisme de haute précision.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Scheme" class="w-full h-48 object-contain bg-slate-100" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">General Control Scheme</span><span class="lang-fr hidden">Schéma Général de Contrôle</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_general_control.jpg" alt="General Control Scheme" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto bg-slate-100" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A comprehensive block diagram illustrating the overall control strategy and signal flow for the entire robotic system.</span>
+                                <span class="lang-fr hidden">Un schéma-bloc complet illustrant la stratégie globale de contrôle et le flux des signaux pour l'ensemble du système robotique.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control" class="w-full h-48 object-contain bg-slate-100" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Computed Torque Control</span><span class="lang-fr hidden">Commande en Couple Calculé</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_torque_control.jpg" alt="Torque Control" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto bg-slate-100" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A detailed schematic of the computed torque control loop, used to govern the dynamic behavior of the macro-micro robot.</span>
+                                <span class="lang-fr hidden">Un schéma détaillé de la boucle de commande en couple calculé, utilisée pour régir le comportement dynamique du robot macro-micro.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_lengthAB.png" alt="Length AB Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Micro Robot Extension (Length AB)</span><span class="lang-fr hidden">Extension du Micro-Robot (AB)</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_lengthAB.png" alt="Length AB Graph" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A graph charting the physical extension and positioning (Length AB) of the micro robot over time during simulation runs.</span>
+                                <span class="lang-fr hidden">Un graphique traçant l'extension physique et le positionnement (Longueur AB) du micro-robot au cours du temps lors des simulations.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_graph_gain.png" alt="Gain Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Adaptive Gain Distribution</span><span class="lang-fr hidden">Distribution Adaptative du Gain</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_graph_gain.png" alt="Gain Graph" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Simulation results displaying the adaptive gain tuning over the duration of the defined trajectory tracking task.</span>
+                                <span class="lang-fr hidden">Résultats de simulation affichant le réglage adaptatif du gain sur la durée de la tâche de suivi de trajectoire définie.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Cartesian Coordinates Tracking</span><span class="lang-fr hidden">Suivi des Coordonnées Cartésiennes</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_graph_cartesian.png" alt="Cartesian Graph" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Performance plots demonstrating the accuracy of the end-effector tracking across the X, Y, and Z Cartesian coordinates.</span>
+                                <span class="lang-fr hidden">Graphiques de performance démontrant la précision du suivi de l'effecteur dans les coordonnées cartésiennes X, Y et Z.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Trajectory Graph" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">3D Output Trajectory</span><span class="lang-fr hidden">Trajectoire de Sortie 3D</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_graph_trajectory.png" alt="Trajectory Graph" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A spatial plot rendering the complete 3D trajectory executed by the robotic system during experimental control validation.</span>
+                                <span class="lang-fr hidden">Un tracé spatial rendant la trajectoire 3D complète exécutée par le système robotique lors de la validation expérimentale du contrôle.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_annex_17.png" alt="Annex 17" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">MATLAB Simulation Annex A</span><span class="lang-fr hidden">Annexe de Simulation A</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_annex_17.png" alt="Annex 17" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">An excerpt from the MATLAB simulation environment showing initialized variables and the specific test conditions applied in Annex A.</span>
+                                <span class="lang-fr hidden">Un extrait de l'environnement de simulation MATLAB montrant les variables initialisées et les conditions de test spécifiques appliquées dans l'Annexe A.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_annex_19.png" alt="Annex 19" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">MATLAB Simulation Annex B</span><span class="lang-fr hidden">Annexe de Simulation B</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_annex_19.png" alt="Annex 19" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">Further MATLAB simulation data and code configurations corresponding to the advanced methodologies detailed in Annex B.</span>
+                                <span class="lang-fr hidden">Données de simulation MATLAB supplémentaires et configurations de code correspondant aux méthodologies avancées détaillées dans l'Annexe B.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_annex_20.png" alt="Annex 20" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Simulink Logic Blocks</span><span class="lang-fr hidden">Blocs Logiques Simulink</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_annex_20.png" alt="Annex 20" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">The underlying Simulink block diagram used to continuously model the logic and physical constraints of the manipulator.</span>
+                                <span class="lang-fr hidden">Le schéma-bloc Simulink sous-jacent utilisé pour modéliser en continu la logique et les contraintes physiques du manipulateur.</span>
                             </p>
                         </div>
-                        <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden flex flex-col">
-                            <img src="assets/images/ECN_research_annex_21.png" alt="Annex 21" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 bg-slate-50 text-center border-t border-slate-200">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Kinematic Solver Block</span><span class="lang-fr hidden">Bloc du Solveur Cinématique</span>
+                            </h4>
+                            <img src="assets/images/ECN_research_annex_21.png" alt="Annex 21" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A focus on the specific Simulink subsystem directly responsible for resolving the direct and inverse kinematics of the robotic arm.</span>
+                                <span class="lang-fr hidden">Un aperçu du sous-système Simulink spécifique directement responsable de la résolution de la cinématique directe et inverse du bras robotique.</span>
                             </p>
                         </div>
+
                     </div>
                 </div>
 
@@ -1692,13 +1753,12 @@
                     <div class="md:col-span-2">
                         <div class="mb-8">
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">System Optimization</span><span class="lang-fr hidden">Optimisation du Système</span>
+                                <span class="lang-en">Project Overview</span><span class="lang-fr hidden">Présentation du projet</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-6">
-                                <span class="lang-en">Focused on the design and dimensional optimization of a 3-RPR (Revolute-Prismatic-Revolute) planar parallel robot. The primary metric was the minimization of overall physical footprint and material usage while strictly preserving required performance envelopes.</span>
-                                <span class="lang-fr hidden">Axé sur la conception et l'optimisation dimensionnelle d'un robot parallèle plan 3-RPR (Revoloïde-Prismatique-Revoloïde). La mesure principale était la minimisation de l'empreinte physique globale et de l'utilisation des matériaux tout en préservant strictement les enveloppes de performances requises.</span>
+                                <span class="lang-en">Developed during an academic year at École Centrale de Nantes, this project focused on the design and size optimization of a 3-RPR (Revolute-Prismatic-Revolute) planar parallel robot. The main objective was to engineer an efficient robotic system by minimizing its overall physical footprint and material usage while preserving strict performance capabilities.</span>
+                                <span class="lang-fr hidden">Développé au cours d'une année universitaire à l'École Centrale de Nantes, ce projet a porté sur la conception et l'optimisation dimensionnelle d'un robot parallèle plan de type 3-RPR (Pivot-Glissière-Pivot). L'objectif principal était de concevoir un système robotique performant en minimisant son encombrement global et la quantité de matériaux utilisés, tout en maintenant un niveau d'exigence strict quant à ses performances.</span>
                             </p>
-                            
                             <div class="w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                                 <iframe class="w-full h-64 md:h-[400px]" src="https://www.youtube.com/embed/QSas-UGCcr0" title="3-RPR Trajectory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -1706,20 +1766,34 @@
 
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Mathematical Constraints & Validation</span><span class="lang-fr hidden">Contraintes Mathématiques et Validation</span>
+                                <span class="lang-en">Size Optimization and Workspace Constraints</span><span class="lang-fr hidden">Optimisation dimensionnelle et contraintes de l'espace de travail</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">A mathematical optimization loop was applied to reduce the geometric boundaries of both the static outer base and the central moving platform. The framework verified that the compact system maintained full functionality within a designated 100 &times; 100 unit square workspace, ensuring the platform could accurately reach all spatial coordinates while permitting rotations of up to &plusmn;30 degrees.</span>
-                                <span class="lang-fr hidden">Une boucle d'optimisation mathématique a été appliquée pour réduire les limites géométriques de la base extérieure statique et de la plateforme mobile centrale. Le framework a vérifié que le système compact maintenait une fonctionnalité complète dans un espace de travail carré désigné de 100 &times; 100 unités, garantissant que la plateforme pouvait atteindre avec précision toutes les coordonnées spatiales tout en permettant des rotations allant jusqu'à &plusmn;30 degrés.</span>
+                                <span class="lang-en">To achieve a minimalist and efficient design, a mathematical optimization process was applied to reduce the size of both the robot's outer base and its central moving platform. The challenge was to make the robot as compact as possible without compromising its operational reach.</span>
+                                <span class="lang-en">The system was successfully optimized to guarantee full functionality within a target 100 × 100 unit square workspace. Inside this required area, the central platform maintained the ability to accurately reach all coordinates and rotate up to ±30 degrees.</span>
+                                <span class="lang-fr hidden">Afin d'obtenir une conception minimaliste et efficace, un processus d'optimisation mathématique a été appliqué pour réduire à la fois la taille de la base fixe du robot et celle de sa plateforme mobile centrale. Le défi consistait à rendre le robot aussi compact que possible sans pour autant compromettre sa portée opérationnelle.</span>
+                                <span class="lang-fr hidden">Le système a été optimisé avec succès pour garantir une pleine fonctionnalité au sein d'un espace de travail cible défini par un carré de 100 × 100 unités. Dans cette zone imposée, la plateforme centrale a conservé sa capacité à atteindre toutes les coordonnées avec précision et à effectuer des rotations allant jusqu'à ±30 degrés.</span>
                             </p>
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Singularity Avoidance</span><span class="lang-fr hidden">Évitement des singularités</span>
+                            </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Parallel mechanisms are notoriously susceptible to singular configurations—zones characterized by a loss of mechanical stiffness or structural uncontrollability. Consequently, the optimization algorithm enforced rigorous singularity avoidance criteria. The geometry was cross-evaluated against 15 extreme workspace poses to confirm absolute structural stability and control integrity.</span>
-                                <span class="lang-fr hidden">Les mécanismes parallèles sont notoirement sensibles aux configurations singulières — des zones caractérisées par une perte de rigidité mécanique ou une incontrôlabilité structurelle. Par conséquent, l'algorithme d'optimisation a appliqué des critères rigoureux d'évitement des singularités. La géométrie a été évaluée croisée avec 15 poses extrêmes de l'espace de travail pour confirmer la stabilité structurelle absolue et l'intégrité du contrôle.</span>
+                                <span class="lang-en">A critical requirement when designing parallel robots is avoiding singular configurations—specific positions where the mechanism loses stiffness or becomes completely uncontrollable. To ensure reliability, the optimization algorithm included strict singularity avoidance constraints.</span>
+                                <span class="lang-en">The robot's stability was evaluated across 15 extreme poses within the workspace to guarantee it would remain stable, highly controllable, and far from any mechanical lock-ups at all times.</span>
+                                <span class="lang-fr hidden">L'une des contraintes majeures lors de la conception de robots parallèles est l'évitement des configurations singulières — des positions spécifiques où le mécanisme perd sa rigidité ou devient totalement incontrôlable. Pour garantir la fiabilité du système, l'algorithme d'optimisation a intégré des contraintes strictes d'évitement de ces singularités.</span>
+                                <span class="lang-fr hidden">La stabilité du robot a été évaluée à travers 15 poses extrêmes réparties dans l'espace de travail, afin de certifier qu'il resterait stable, hautement contrôlable et à l'abri de tout blocage mécanique, à tout instant.</span>
                             </p>
-                            <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">The theoretical dimensions were translated into a fully realized 3D mechanical assembly using SolidWorks. CAD simulations subsequently verified the mathematical model, demonstrating smooth, singularity-free kinematics across the required operational domain.</span>
-                                <span class="lang-fr hidden">Les dimensions théoriques ont été traduites en un assemblage mécanique 3D entièrement réalisé à l'aide de SolidWorks. Les simulations CAO ont ensuite vérifié le modèle mathématique, démontrant une cinématique fluide et sans singularité sur l'ensemble du domaine opérationnel requis.</span>
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Validation and CAD Simulation</span><span class="lang-fr hidden">Validation et simulation CAO</span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                <span class="lang-en">Once the theoretical dimensions were calculated, the design was validated by translating the data into a fully realized 3D mechanical assembly using SolidWorks. By simulating the robot's movements, the CAD model successfully proved the mathematical concepts, demonstrating smooth, singularity-free operation across its entire required workspace.</span>
+                                <span class="lang-fr hidden">Une fois les dimensions théoriques calculées, la conception a été validée par la traduction des données en un assemblage mécanique 3D complet réalisé sur SolidWorks. Grâce à la simulation des mouvements du robot, le modèle CAO a permis de valider avec succès les concepts mathématiques, démontrant un fonctionnement fluide et sans aucune singularité sur l'ensemble de l'espace de travail requis.</span>
                             </p>
+
+
                         </div>
                     </div>
                 </div>
@@ -1777,11 +1851,11 @@
                     <div class="md:col-span-2">
                         <div class="mb-8">
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Development Overview</span><span class="lang-fr hidden">Aperçu du Développement</span>
+                                <span class="lang-en">Project Overview</span><span class="lang-fr hidden">Présentation du projet</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-6">
-                                <span class="lang-en">Focused on the mathematical modeling, simulation, and software control of multi-axis robotic manipulators. The development mandated programming in C++ to author the core algorithms governing spatial movement, specifically computing the Direct Geometric Model, Inverse Geometric Model, and Jacobian Kinematics from scratch.</span>
-                                <span class="lang-fr hidden">Axé sur la modélisation mathématique, la simulation et le contrôle logiciel de manipulateurs robotiques multi-axes. Le développement a nécessité une programmation en C++ pour créer les algorithmes de base régissant le mouvement spatial, en calculant spécifiquement le modèle géométrique direct, le modèle géométrique inverse et la cinématique jacobienne à partir de zéro.</span>
+                                <span class="lang-en">Developed during the Master's program at École Centrale de Nantes, this comprehensive lab work focused on the fundamental mathematical modeling, simulation, and control of robotic manipulators. The project required programming in C++ to develop the core algorithms that govern robotic movement, specifically calculating the Direct Geometric Model, Inverse Geometric Model, and Jacobian Kinematics.</span>
+                                <span class="lang-fr hidden">Réalisé dans le cadre du programme de Master à l'École Centrale de Nantes, ce projet d'étude approfondi s'est concentré sur les fondamentaux de la modélisation mathématique, de la simulation et de la commande de bras manipulateurs robotiques. Il a nécessité une programmation en C++ afin de développer les algorithmes de base régissant les mouvements des robots, avec un accent particulier sur le calcul du Modèle Géométrique Direct (MGD), du Modèle Géométrique Inverse (MGI) et de la cinématique via la matrice jacobienne.</span>
                             </p>
                             
                             <div class="w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
@@ -1791,16 +1865,23 @@
 
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Kinematics & Generation</span><span class="lang-fr hidden">Cinématique et Génération</span>
+                                <span class="lang-en">Kinematic Modeling</span><span class="lang-fr hidden">Modélisation cinématique</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">The architectural foundation required establishing Modified Denavit-Hartenberg (MDH) parameters for respective mechanical structures. Direct Geometric Model algorithms were engineered to compute exact end-effector poses based on joint inputs. Concurrently, Jacobian matrices were derived to establish the relationship between joint velocities and operational velocities. Complex trigonometric and numerical solvers were constructed to resolve the Inverse Kinematics problem across various wrist configurations.</span>
-                                <span class="lang-fr hidden">La fondation architecturale a nécessité l'établissement de paramètres de Denavit-Hartenberg Modifiés (MDH) pour les structures mécaniques respectives. Les algorithmes du modèle géométrique direct ont été conçus pour calculer les poses exactes de l'effecteur final en fonction des entrées articulaires. Concurremment, les matrices jacobiennes ont été dérivées pour établir la relation entre les vitesses articulaires et les vitesses opérationnelles. Des solveurs trigonométriques et numériques complexes ont été construits pour résoudre le problème de cinématique inverse à travers diverses configurations de poignet.</span>
+                                <span class="lang-en">The foundation of the project involved establishing the Modified Denavit-Hartenberg (MDH) parameters for each robot. These parameters were used to computationally derive the kinematics. Direct Geometric Model algorithms were written to calculate the exact pose of the end-effector in Cartesian space based on the given joint configurations. The Jacobian matrix was computed to relate the joint velocities to the operational velocity of the end-effector. Additionally, complex trigonometric solvers were implemented as Inverse Kinematics to calculate the required joint angles needed to position the robot's end-effector at a desired target pose.</span>
+                                <span class="lang-fr hidden">La base de ce projet a consisté à établir les paramètres de Denavit-Hartenberg Modifiés (DHM) pour chaque robot. Ces paramètres ont ensuite été utilisés pour dériver informatiquement la cinématique. Les algorithmes du Modèle Géométrique Direct ont été développés pour calculer la pose exacte de l'organe terminal (effecteur) dans l'espace cartésien, en fonction des configurations articulaires données. La matrice jacobienne a été calculée afin d'établir la relation entre les vitesses articulaires et la vitesse opérationnelle de l'effecteur. De plus, des méthodes de résolution trigonométriques complexes ont été implémentées pour la cinématique inverse, permettant de calculer les angles articulaires nécessaires au positionnement de l'organe terminal sur une pose cible désirée.</span>
                             </p>
-                            <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">Trajectory generation utilized Point-to-Point control methodologies. Joint Space Interpolation was authored to synthesize smooth transitional paths between configurations. Cartesian Space Interpolation leveraged the custom Inverse Geometric solvers to constrain the end-effector along strict 3D linear paths. Finally, Jacobian-Based pseudo-inverse control algorithms generated continuous velocity commands, actively minimizing positional error along the operational trajectory.</span>
-                                <span class="lang-fr hidden">La génération de trajectoire a utilisé des méthodologies de contrôle Point à Point. L'interpolation dans l'espace articulaire a été créée pour synthétiser des chemins de transition fluides entre les configurations. L'interpolation dans l'espace cartésien a tiré parti des solveurs géométriques inverses sur mesure pour contraindre l'effecteur final le long de chemins linéaires 3D stricts. Enfin, les algorithmes de contrôle pseudo-inverses basés sur le Jacobien ont généré des commandes de vitesse continues, minimisant activement l'erreur de position le long de la trajectoire opérationnelle.</span>
+
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Trajectory Generation and Control</span><span class="lang-fr hidden">Génération de trajectoire et commande</span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
+                                <span class="lang-en">With the mathematical models established, various point-to-point control strategies were implemented to guide the robots. Joint Space Interpolation calculated trajectories to move the robot smoothly between initial and final joint configurations. Cartesian Space Interpolation utilized the Inverse Geometric Model to force the end-effector to follow a straight 3D line in operational space by sequentially reaching closely calculated intermediary poses. Furthermore, Jacobian-Based Control sent continuous joint velocity commands, calculated via the Jacobian pseudo-inverse, to drive the end-effector toward the desired pose in a straight line while minimizing pose error.</span>
+                                <span class="lang-fr hidden">Une fois les modèles mathématiques établis, diverses stratégies de commande point à point ont été mises en œuvre pour guider les robots. L'interpolation dans l'espace articulaire a permis de calculer les trajectoires nécessaires pour déplacer le robot de manière fluide entre ses configurations articulaires initiale et finale. L'interpolation dans l'espace cartésien a exploité le Modèle Géométrique Inverse pour contraindre l'organe terminal à suivre une ligne droite 3D dans l'espace opérationnel, en atteignant de manière séquentielle des poses intermédiaires rigoureusement calculées. Enfin, une commande basée sur le modèle jacobien a permis d'envoyer des consignes continues de vitesse articulaire, calculées via la pseudo-inverse de la matrice jacobienne, afin de diriger l'organe terminal vers la pose souhaitée en ligne droite tout en minimisant l'erreur de pose.</span>
                             </p>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -1858,30 +1939,52 @@
                     <div class="md:col-span-2">
                         <div class="mb-8">
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Project Directive</span><span class="lang-fr hidden">Directive du Projet</span>
+                                <span class="lang-en">Project Overview:</span>
+                                <span class="lang-fr hidden">Présentation du projet</span>
                             </h3>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">Comprehensive design, simulation, and logic integration of an automated robotic work cell tailored for a laser welding production line. The engineering mandate was to deliver a robust solution displacing manual welding operations, optimizing throughput metrics while complying with rigorous industrial safety and quality control standards.</span>
-                                <span class="lang-fr hidden">Conception complète, simulation et intégration logique d'une cellule de travail robotisée automatisée adaptée à une ligne de production de soudage laser. Le mandat d'ingénierie était de fournir une solution robuste remplaçant les opérations de soudage manuelles, optimisant les mesures de rendement tout en respectant des normes industrielles rigoureuses de sécurité et de contrôle qualité.</span>
+                                <span class="lang-en">The work focuses on the comprehensive design, simulation, and integration of an automated robotic cell tailored for a laser welding production line. The main objective was to deliver a reliable solution to replace manual welding operations, optimizing throughput and production time while strictly adhering to industrial quality control and safety standards.</span>
+                                <span class="lang-fr hidden">Les travaux portent sur la conception globale, la simulation et l'intégration d'une cellule robotisée automatisée destinée à une ligne de production de soudage laser. L'objectif principal était de fournir une solution fiable pour remplacer les opérations de soudage manuel, en optimisant les cadences de production et les temps de cycle, tout en respectant des normes strictes en matière de contrôle qualité et de sécurité industrielle.</span>
                             </p>
                         </div>
 
                         <div>
                             <h3 class="text-xl font-bold text-slate-800 mb-3">
-                                <span class="lang-en">Automation & Safety Architecture</span><span class="lang-fr hidden">Architecture d'Automatisation et de Sécurité</span>
+                                <span class="lang-en">Robotic Coordination and Automation</span>
+                                <span class="lang-fr hidden">Coordination et automatisation robotique</span>
                             </h3>
-                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Cell operation dictates the synchronization of two distinct industrial arms. An ABB IRB 4600 functions as the primary effector, maneuvering the laser tool along calculated weld trajectories. An auxiliary ABB IRB 1410 is deployed for precise part handling, locating and securing the secondary component onto the base plate prior to weld execution. Base plate stabilization is guaranteed by custom pneumatic clamp fixtures modeled within SolidWorks.</span>
-                                <span class="lang-fr hidden">Le fonctionnement de la cellule dicte la synchronisation de deux bras industriels distincts. Un ABB IRB 4600 fonctionne comme effecteur principal, manœuvrant l'outil laser le long de trajectoires de soudure calculées. Un ABB IRB 1410 auxiliaire est déployé pour la manipulation précise des pièces, localisant et sécurisant le composant secondaire sur la plaque de base avant l'exécution de la soudure. La stabilisation de la plaque de base est garantie par des fixations à pinces pneumatiques sur mesure modélisées dans SolidWorks.</span>
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-sm mb-4">
-                                <span class="lang-en">Virtual commissioning was executed entirely inside ABB RobotStudio. This environment facilitated offline trajectory programming, collision detection, and parameter configuration for the integrated Cognex visual inspection nodes. SolidWorks was employed for the precise mechanical design of all custom components within the cell, including the design of the pneumatic work-holding fixtures, safety fencing, and the specific connection flanges required to mount the welding tool to the robot's Tool Center Point.</span>
-                                <span class="lang-fr hidden">La mise en service virtuelle a été exécutée entièrement dans ABB RobotStudio. Cet environnement a facilité la programmation hors ligne des trajectoires, la détection des collisions et la configuration des paramètres pour les nœuds d'inspection visuelle Cognex intégrés. SolidWorks a été utilisé pour la conception mécanique précise de tous les composants personnalisés de la cellule, y compris la conception des fixations pneumatiques de maintien des pièces, des clôtures de sécurité et des brides de connexion spécifiques requises pour monter l'outil de soudage sur le point central de l'outil (TCP) du robot.</span>
-                            </p>
                             <p class="text-gray-700 leading-relaxed text-sm">
-                                <span class="lang-en">The architectural layout inherently adheres to ISO safety protocols, featuring automated conveyor interlocks, physical perimeter barriers, and safety laser scanners to ensure an uncompromised operational envelope.</span>
-                                <span class="lang-fr hidden">L'agencement architectural adhère intrinsèquement aux protocoles de sécurité ISO, comportant des verrouillages de convoyeur automatisés, des barrières périmétriques physiques et des scanners laser de sécurité pour garantir une enveloppe opérationnelle sans compromis.</span>
+                                <span class="lang-en">The manufacturing cell relies on the synchronized operation of two distinct industrial robotic arms. An ABB IRB 4600 serves as the primary welding unit, selected to maneuver the laser tool along precisely calculated trajectories across the workpieces. To complement this, an auxiliary ABB IRB 1410 handles the precise manipulation of parts. It is responsible for locating, picking, and securely holding the secondary component in exact alignment on top of the base plate prior to and during the weld execution.</span>
+                                <span class="lang-fr hidden">La cellule de fabrication repose sur le fonctionnement synchronisé de deux bras robotiques industriels distincts. Un ABB IRB 4600 agit comme unité de soudage principale, sélectionné pour manœuvrer l'outil laser le long de trajectoires précisément calculées sur les pièces à usiner. En complément, un robot auxiliaire ABB IRB 1410 assure la manipulation précise des composants. Il est chargé de localiser, saisir et maintenir la pièce secondaire dans un alignement parfait sur la plaque de base avant et pendant le soudage.</span>
                             </p>
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Workholding and Mechanical Design</span>
+                                <span class="lang-fr hidden"></span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <span class="lang-en">To guarantee stability during high-precision laser welding, the base plates are secured using custom-designed fixtures. Modeled in SolidWorks, these fixtures integrate pneumatic clamp actuators that automatically lock the base plates onto the mechanized conveyor before the auxiliary robot positions the top piece. SolidWorks was also utilized for the mechanical design of all custom components within the cell, including the specific connection flanges required to mount the welding tool to the primary robot's Tool Center Point (TCP).</span>
+                                <span class="lang-fr hidden">Afin de garantir la stabilité lors des opérations de soudage laser de haute précision, les plaques de base sont maintenues par des systèmes de fixation conçus sur mesure. Modélisés sous SolidWorks, ces montages intègrent des actionneurs pneumatiques qui verrouillent automatiquement les plaques sur le convoyeur mécanisé avant que le robot auxiliaire ne positionne la pièce supérieure. SolidWorks a également été utilisé pour la conception mécanique de tous les composants spécifiques de la cellule, y compris les brides de connexion requises pour fixer l'outil de soudage au point de centre d'outil (TCP) du robot principal.</span>
+                            </p>
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Software Architecture and Virtual Commissioning</span>
+                                <span class="lang-fr hidden"></span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <span class="lang-en">The operational logic and layout were developed and validated virtally before physical implementation. ABB RobotStudio served as the core environment for virtual commissioning, facilitating 3D layout planning, collision detection, and offline trajectory programming for both robotic arms. Additionally, the software was used to configure and integrate the Cognex visual inspection cameras, establishing the necessary communication and logic for machine vision quality control.</span>
+                                <span class="lang-fr hidden">La logique opérationnelle et l'agencement ont été développés et validés virtuellement avant l'implémentation physique. ABB RobotStudio a servi d'environnement de base pour la mise en service virtuelle, facilitant la planification 3D, la détection des collisions et la programmation hors ligne des trajectoires des deux bras robotiques. De plus, le logiciel a été utilisé pour configurer et intégrer les caméras d'inspection visuelle Cognex, établissant ainsi la communication et la logique nécessaires au contrôle qualité par vision artificielle.</span>
+                            </p>
+
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">
+                                <span class="lang-en">Safety and Industrial Standards</span>
+                                <span class="lang-fr hidden"></span>
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                <span class="lang-en">The cell layout complies with ISO safety protocols. The robotic station ensures a secure operational environment through the integration of automated conveyor interlocks, physical perimeter fencing, safety laser scanners, and emergency stop mechanisms.</span>
+                                <span class="lang-fr hidden">L'agencement de la cellule respecte les protocoles de sécurité ISO. La station robotique garantit un environnement opérationnel sécurisé grâce à l'intégration de verrouillages automatisés des convoyeurs, de barrières physiques, de scrutateurs laser de sécurité et de mécanismes d'arrêt d'urgence.</span>
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -2114,7 +2217,7 @@
                                 <span class="lang-fr hidden">Vidéo de Démonstration : Tri de Fruits</span>
                             </h4>
                             <div class="w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
-                                <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/UTgQVBnhRxQ" title="Fruit Sorting Simulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="w-full h-64 md:h-[500px]" src="https://youtu.be/ElfbiQBf7jY" title="Fruit Sorting Simulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <p class="text-sm text-gray-500 italic mt-2">
                                 <span class="lang-en">Video demonstration of the modular ROS 2 architecture executing an autonomous pick-and-place routine, highlighting the interaction between the Tkinter control interface, OpenCV vision node, and the Gazebo Harmonic physics engine.</span>
@@ -2157,7 +2260,7 @@
                         <span class="lang-fr hidden">Exploration et Cartographie Autonomes RRT</span>
                     </h4>
                     <!-- UPDATE YOUTUBE LINK HERE by replacing 'YOUR_RRT_MAPPING_VIDEO_ID' -->
-                    <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/YOUR_RRT_MAPPING_VIDEO_ID" title="RRT Mapping Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="w-full h-64 md:h-[500px]" src="https://youtu.be/V5pEX6XzKTk" title="RRT Mapping Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
@@ -2248,89 +2351,124 @@
                     </div>
                 </div>
 
-                <!-- MEDIA GALLERY AT THE BOTTOM -->
+                <!-- Media Gallery Section -->
                 <div class="border-t border-gray-100 pt-8 mt-8">
                     <h3 class="text-2xl font-bold text-slate-800 mb-6">
                         <span class="lang-en">Media Gallery & Architecture Visuals</span>
                         <span class="lang-fr hidden">Galerie Multimédia et Visuels d'Architecture</span>
                     </h3>
 
-                    <!-- VIDEO 2: General simulation / other video -->
+                    <!-- VIDEO: General simulation / other video -->
                     <div class="mb-10 w-full rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
                         <h4 class="text-lg font-bold text-slate-700 bg-slate-100 px-4 py-3 border-b border-slate-200">
                             <span class="lang-en">Swerve Drive Kinematics & Gazebo Simulation</span>
                             <span class="lang-fr hidden">Cinématique Swerve et Simulation Gazebo</span>
                         </h4>
-                        <!-- UPDATE YOUTUBE LINK HERE by replacing 'YOUR_OTHER_SWERVE_VIDEO_ID' -->
-                        <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/YOUR_OTHER_SWERVE_VIDEO_ID" title="Swerve Simulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="w-full h-64 md:h-[500px]" src="https://www.youtube.com/embed/0iyGoaHDjWc" title="Swerve Simulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
                     <!-- Complete Image Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Image 1 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_Robot.png" alt="Swerve Robot" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Swerve Robot Chassis</span><span class="lang-fr hidden">Châssis de Robot Swerve</span>
+                            </h4>
+                            <img src="assets/images/swerve_Robot.png" alt="Swerve Robot" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A rendered visualization of the swerve drive robotic chassis, highlighting the independent steering and driving modules.</span>
+                                <span class="lang-fr hidden">Une visualisation rendue du châssis robotique à roues swerve, mettant en évidence les modules de direction et d'entraînement indépendants.</span>
                             </p>
                         </div>
-                        <!-- Image 2 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_explorationRRT.png" alt="RRT Exploration Algorithm" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">RRT Frontier Detection</span><span class="lang-fr hidden">Détection de Frontières RRT</span>
+                            </h4>
+                            <img src="assets/images/swerve_explorationRRT.png" alt="RRT Exploration Algorithm" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A visual representation of the Rapidly-exploring Random Tree (RRT) algorithm actively detecting frontiers for autonomous exploration.</span>
+                                <span class="lang-fr hidden">Une représentation visuelle de l'algorithme RRT (Rapidly-exploring Random Tree) détectant activement les frontières pour l'exploration autonome.</span>
                             </p>
                         </div>
-                        <!-- Image 3 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_mapping.png" alt="SLAM Mapping" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">SLAM Map Generation</span><span class="lang-fr hidden">Génération de Carte SLAM</span>
+                            </h4>
+                            <img src="assets/images/swerve_mapping.png" alt="SLAM Mapping" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A generated 2D occupancy grid map created using Simultaneous Localization and Mapping (SLAM) during the robot's navigation.</span>
+                                <span class="lang-fr hidden">Une carte de grille d'occupation 2D générée à l'aide de la cartographie et localisation simultanées (SLAM) pendant la navigation du robot.</span>
                             </p>
                         </div>
-                        <!-- Image 4 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_Interface.png" alt="Swerve Interface" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Control Interface</span><span class="lang-fr hidden">Interface de Contrôle</span>
+                            </h4>
+                            <img src="assets/images/swerve_Interface.png" alt="Swerve Interface" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">The user interface designed for monitoring the swerve robot's state and issuing teleoperation commands.</span>
+                                <span class="lang-fr hidden">L'interface utilisateur conçue pour surveiller l'état du robot swerve et émettre des commandes de téléopération.</span>
                             </p>
                         </div>
-                        <!-- Image 5 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_RRT_process.png" alt="RRT Process" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">RRT Expansion Process</span><span class="lang-fr hidden">Processus d'Expansion RRT</span>
+                            </h4>
+                            <img src="assets/images/swerve_RRT_process.png" alt="RRT Process" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">An intermediate step showing the RRT expansion process as the algorithm searches for viable paths through the unknown environment.</span>
+                                <span class="lang-fr hidden">Une étape intermédiaire montrant le processus d'expansion RRT alors que l'algorithme cherche des chemins viables dans l'environnement inconnu.</span>
                             </p>
                         </div>
-                        <!-- Image 6 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col">
-                            <img src="assets/images/swerve_maze_gazebo.png" alt="Maze Environment in Gazebo" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Gazebo Maze Environment</span><span class="lang-fr hidden">Environnement Labyrinthe Gazebo</span>
+                            </h4>
+                            <img src="assets/images/swerve_maze_gazebo.png" alt="Maze Environment in Gazebo" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">The simulated maze environment constructed in Gazebo to test and validate the robot's mapping and navigation algorithms.</span>
+                                <span class="lang-fr hidden">L'environnement de labyrinthe simulé construit dans Gazebo pour tester et valider les algorithmes de cartographie et de navigation du robot.</span>
                             </p>
                         </div>
-                        <!-- Image 7 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col lg:col-span-1">
-                            <img src="assets/images/swerve_RRT_generated.png" alt="RRT Generated Path" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">RRT Generated Tree</span><span class="lang-fr hidden">Arbre Généré par RRT</span>
+                            </h4>
+                            <img src="assets/images/swerve_RRT_generated.png" alt="RRT Generated Path" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">The complete tree structure generated by the RRT algorithm, illustrating the extensive search space covered by the planner.</span>
+                                <span class="lang-fr hidden">La structure arborescente complète générée par l'algorithme RRT, illustrant le vaste espace de recherche couvert par le planificateur.</span>
                             </p>
                         </div>
-                        <!-- Image 8 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col lg:col-span-1">
-                            <img src="assets/images/swerve_RRT_wMap.png" alt="RRT Map Overlay" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">RRT Overlay on Occupancy Grid</span><span class="lang-fr hidden">Superposition RRT sur Grille d'Occupation</span>
+                            </h4>
+                            <img src="assets/images/swerve_RRT_wMap.png" alt="RRT Map Overlay" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">The RRT navigation paths overlaid directly onto the SLAM-generated occupancy grid, demonstrating successful path planning within the mapped space.</span>
+                                <span class="lang-fr hidden">Les chemins de navigation RRT superposés directement sur la grille d'occupation générée par le SLAM, démontrant une planification de chemin réussie dans l'espace cartographié.</span>
                             </p>
                         </div>
-                        <!-- Image 9 -->
-                        <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-sm flex flex-col lg:col-span-1 sm:col-span-2 lg:col-auto">
-                            <!-- Included close-up variants to fill out the grid nicely -->
-                            <img src="assets/images/swerve_RRT_generated_closeUp.png" alt="RRT Close Up" class="w-full h-48 object-cover hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/600x400/f1f5f9/94a3b8?text=Image+Pending'">
-                            <p class="text-xs text-gray-500 font-medium p-3 border-t border-slate-200 bg-white text-center">
+
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-2">
                                 <span class="lang-en">Tree Generation Close-up</span><span class="lang-fr hidden">Détail de la Génération de l'Arbre</span>
+                            </h4>
+                            <img src="assets/images/swerve_RRT_generated_closeUp.png" alt="RRT Close Up" class="w-full rounded-lg shadow-sm border border-slate-200 h-auto" onerror="this.src='https://placehold.co/800x600/f1f5f9/94a3b8?text=Image+Pending'">
+                            <p class="text-sm text-gray-500 italic mt-2">
+                                <span class="lang-en">A close-up view of the RRT nodes and branches, detailing the local density and distribution of the randomly generated path points.</span>
+                                <span class="lang-fr hidden">Une vue détaillée des nœuds et des branches RRT, détaillant la densité locale et la distribution des points de chemin générés aléatoirement.</span>
                             </p>
                         </div>
+
                     </div>
                 </div>
 
@@ -2408,6 +2546,13 @@
                 btnsEn.forEach(b => { if(b) b.classList.remove('lang-btn-active'); b.classList.add('text-gray-400'); });
                 document.title = "Luis González | Ingénieur en Robotique";
             }
+
+            // Update CV links based on language
+            const cvLinks = document.querySelectorAll('.cv-download-link');
+            const cvFile = lang === 'fr' ? 'assets/docs/CV_LuisGonzalez_FR.pdf' : 'assets/docs/CV_LuisGonzalez_En.pdf';
+            cvLinks.forEach(link => {
+                link.href = cvFile;
+            });
 
             // Update URL hash to include the language so it can be shared (e.g., #home&fr)
             const currentSection = document.querySelector('.section-view.active')?.id || 'home';
