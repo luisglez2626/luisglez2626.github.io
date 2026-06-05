@@ -112,7 +112,7 @@
             <button onclick="showSection('repositories')" class="block w-full text-left px-4 py-3 border-b border-slate-700 hover:bg-slate-700">
                 <span class="lang-en">My Code</span><span class="lang-fr hidden">Mes Codes</span>
             </button>
-            <a href="assets/docs/CV_LuisGonzalez_En.pdf" target="_blank" class="cv-download-link block w-full text-left px-4 py-3 text-blue-400 font-semibold hover:bg-slate-700">
+            <a href="assets/docs/CV_LuisGonzalez_EN.pdf" target="_blank" class="cv-download-link block w-full text-left px-4 py-3 text-blue-400 font-semibold hover:bg-slate-700">
                 <i class="fa-solid fa-file-pdf mr-2"></i> <span class="lang-en">Open CV</span><span class="lang-fr hidden">Ouvrir le CV</span>
             </a>
         </div>
@@ -211,7 +211,7 @@
 
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap justify-center md:justify-start gap-4">
-                            <a href="assets/docs/CV_LuisGonzalez_En.pdf" target="_blank" class="cv-download-link bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-6 rounded-lg transition shadow-md flex items-center">
+                            <a href="assets/docs/CV_LuisGonzalez_EN.pdf" target="_blank" class="cv-download-link bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-6 rounded-lg transition shadow-md flex items-center">
                                 <i class="fa-solid fa-download mr-2"></i> 
                                 <span class="lang-en">Download CV</span><span class="lang-fr hidden">Télécharger le CV</span>
                             </a>
@@ -2549,7 +2549,7 @@
 
             // Update CV links based on language
             const cvLinks = document.querySelectorAll('.cv-download-link');
-            const cvFile = lang === 'fr' ? 'assets/docs/CV_LuisGonzalez_FR.pdf' : 'assets/docs/CV_LuisGonzalez_En.pdf';
+            const cvFile = lang === 'fr' ? 'assets/docs/CV_LuisGonzalez_FR.pdf' : 'assets/docs/CV_LuisGonzalez_EN.pdf';
             cvLinks.forEach(link => {
                 link.href = cvFile;
             });
